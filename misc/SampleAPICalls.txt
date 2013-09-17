@@ -1,0 +1,12 @@
+All events skiddle
+http://www.skiddle.com/api/v1/events/?api_key=838cec44cf59198b22731f4be213988a
+Skiddle events type Festival
+http://www.skiddle.com/api/v1/events/?api_key=838cec44cf59198b22731f4be213988a&eventcode=FEST
+Skiddle events type Festival with geo query
+http://www.skiddle.com/api/v1/events/?api_key=838cec44cf59198b22731f4be213988a&eventcode=FEST&latitude=53&longitude=-2.12&radius=1000
+As previous but limited to 21/09/2013 max extent of 5 day forecast
+http://www.skiddle.com/api/v1/events/?api_key=838cec44cf59198b22731f4be213988a&eventcode=FEST&latitude=53&longitude=-2.12&radius=1000&maxDate=2013-09-21
+Skiddle venue search with lon lat 30 miles
+http://www.skiddle.com/api/v1/venues/?api_key=838cec44cf59198b22731f4be213988a&latitude=53&longitude=-2.12&radius=30
+Skiddle venue search with lon lat 30 miles type outdoor
+http://www.skiddle.com/api/v1/venues/?api_key=838cec44cf59198b22731f4be213988a&latitude=53&longitude=-2.12&radius=30&type=o

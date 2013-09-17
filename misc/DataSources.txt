@@ -1,0 +1,173 @@
+FOSS4G Geohack – Weather Impacts on Outdoor Events
+
+Types of Events
+
+Outdoor events 
+For example: outdoor sporting Events, protest marches / demonstrations, carnivals, open air concerts, park events, music festivals, county shows / agricultural shows, farmers markets, fetes / fairs
+
+Data Sources
+
+Twitter
+
+Use spatial search on twitter api?
+
+Facebook Events
+
+https://developers.facebook.com/docs/reference/api/examples/ 
+
+Search Facebook
+Name: Market
+Type: Place
+Center: 53, -2.12
+Distance: 1000
+
+https://developers.facebook.com/tools/explorer/?method=GET&path=search%3Fq%3Dmarket%26type%3Dplace%26center%3D53%2C-2.12%26distance%3D10000 
+
+Search Event Using Limit And Offset
+Fields: Select Name, Location, Venue 
+Name: Protest
+Type: Event
+Limit: 20
+Offset: 10
+
+https://developers.facebook.com/tools/explorer/?method=GET&path=search%3Ffields%3Dname%2Clocation%2Cvenue%26q%3Dprotest%26type%3Devent%26limit%3D20%26offset%3D10 
+
+Details of specific event (Nottinghill Carnival)
+ID: 137689049743146
+
+https://developers.facebook.com/tools/explorer/?method=GET&path=137689049743146%2F 
+
+Search for Facebook Page 
+Name: market and type market (can specify type by putting the event type after the name. Hence “market market”)
+Type: Page
+
+https://developers.facebook.com/tools/explorer/?method=GET&path=search%3Fq%3Dmarket%2520market%26type%3Dpage 
+
+
+FQL Show details for a particular page (Treacle Market food market Page)
+
+ https://developers.facebook.com/tools/explorer/?fql=select%20name%2Ccategories%20from%20page%20where%20name%20%3D%20%22Treacle%20Market%22 
+
+FQL Show details of particular event (Treacle Market food market Event)
+
+Event Id: 20408199849286031
+
+https://developers.facebook.com/tools/explorer/?fql=select%20name%2Call_members_count%20from%20event%20where%20eid%20%3D%20408199849286031 
+
+
+FourSquare
+
+Events 
+
+https://developer.foursquare.com/docs/ 
+
+Search for venues using lon lat
+Center: 53.2, -2.12 
+
+https://developer.foursquare.com/docs/explore#req=venues/search%3Fll%3D53.260002,-2.122936 
+
+FourSquare Event Detail
+Event ID: 8183976
+
+https://developer.foursquare.com/docs/explore#req=events/search%3Fdomain%3Dsongkick.com%26eventId%3D8183976 
+
+Search for foursquare venue using lon lat and category
+
+https://developer.foursquare.com/docs/explore#req=venues/search%3Fll%3D53.258663,-2.119287%26categoryId%3D4bf58dd8d48988d1e5931735 
+
+Songkick
+
+Need to register for API key
+
+Venue Search
+
+https://www.songkick.com/developer/venue-search 
+
+Location Search
+
+https://www.songkick.com/developer/location-search 
+
+Search for events in a particular area
+
+
+Location Search
+This will return the Songkick Area e.g. Manchester, Liverpool, Stoke on Trent etc. This is known as the metro_area_id and can be used in the other Songkick apis
+
+Search for metro area id using lon lat
+
+http://api.songkick.com/api/3.0/search/locations.xml?location=geo:53.260002,-2.122936&apikey=SPdCd31OdYwji5lc 
+
+Search for metro area id using place name
+
+http://api.songkick.com/api/3.0/search/locations.xml?query=macclesfield&apikey=SPdCd31OdYwji5lc 
+
+Search for events 
+
+http://api.songkick.com/api/3.0/metro_areas/24537/calendar.xml?apikey=SPdCd31OdYwji5lc 
+
+Skiddle
+
+Shows festivals in UK return XML feed. Unfortunately doesn't return lon lat in the results and is not searchable. However, it does return address of the festival including Town. Therefore Ordnance Survey Open Gazetteer Data could be used to geocode the festivals
+
+http://xml.skiddlecdn.co.uk/affiliates/festivals.xml
+
+Software which could be used with above XML feed.
+https://github.com/petewarden/geodict  extract coords from plain text
+
+
+
+Met Office
+
+Need to register for API key
+
+http://www.metoffice.gov.uk/datapoint 
+
+5 Day forecast
+
+http://www.metoffice.gov.uk/datapoint/product/uk-daily-site-specific-forecast
+
+Observations for last 24 hours
+
+http://www.metoffice.gov.uk/datapoint/product/uk-hourly-site-specific-observations
+
+Historic Weather Observations
+
+http://www.metoffice.gov.uk/datapoint/product/historical-station-obs 
+
+Get List of all weather forecast sites in UK
+
+
+Known Issues with Data Sources
+
+Difficult to isolate outdoor events from indoor ones. This can sometimes be done by search event type e.g. festival.
+Difficult to get numbers of people attending a festival, some apis include information such as venue capacity and popularity. Could also use Facebook likes etc.
+
+Possible Functionality
+Pan the map to a location then search for events starting in next 5 days in the area 
+Search the Met Office 5 day weather forecast in the same area to find the weather on the day (and time?) of event
+Or search the Met Office for bad weather forecast in next 5 days and then look for events near to the bad weather.
+
+Possible Implementations
+
+QGIS Plugin 
+Open Layers web page
+Mobile Phone application
+REST API returning GeoJson
+
+
+Non API List of Upcoming Events
+
+Some known festivals coming up
+
+Mischief festival: Start Date 20th September 2013
+view festival
+Folkstock: Start Date 21st September
+view festival
+Skyfest: Start Date 21st September 
+view festival
+Gerry Cottle's Circus, Ravenscourt Park 16th - 17th September
+Moscow State Circus, Tatton Park, Knutsford 18th - 22nd September
+The Singing Kettle, Isle of Skye 21st September
+Drive in Movies, Ardur Recreation Ground, Shoreham-by-Sea 21st September
+Agatha Christie Festival, Torquay TQ2 5JG 15th - 22nd September
+Festival of the Sea, Isle of Wight 14th - 22nd September

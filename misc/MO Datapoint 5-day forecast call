@@ -1,0 +1,125 @@
+Gets 5 day weather forecast information from location id.
+
+Key
++ some initial suggested risk flags (to be finalised)
+----------------
+U = UV Solar Index                                ~risk when >= 6
+W = Significant Weather Code (see list below)     ~risk when = [6, 13, 14, 15, 18, 21, 25, 26, 27, 28, 29, 30] 
+V = Visibility (m)
+T = Screen Temperature (C)                        ~risk when >= 25
+S = Wind speed (mph)                              ~risk when >= 20
+P = Sea-level pressure (hPa)
+Pp = Precipitation Probability (%)
+H = Screen Relative Humidity (%)
+G = Wind gust (mph)                               ~risk when >= 20
+F = Feels-like temperature (C)
+D = Wind Direction
+$### = Number of minutes after midnight (UTC = GMT)
+
+Significant Weather Codes
+
+NA	Not available
+0	Clear night
+1	Sunny day
+2	Partly cloudy (night)
+3	Partly cloudy (day)
+4	Not used
+5	Mist
+6	Fog
+7	Cloudy
+8	Overcast
+9	Light rain shower (night)
+10	Light rain shower (day)
+11	Drizzle
+12	Light rain
+13	Heavy rain shower (night)
+14	Heavy rain shower (day)
+15	Heavy rain
+16	Sleet shower (night)
+17	Sleet shower (day)
+18	Sleet
+19	Hail shower (night)
+20	Hail shower (day)
+21	Hail
+22	Light snow shower (night)
+23	Light snow shower (day)
+24	Light snow
+25	Heavy snow shower (night)
+26	Heavy snow shower (day)
+27	Heavy snow
+28	Thunder shower (night)
+29	Thunder shower (day)
+30	Thunder
+
+
+Used Beeston as Location
+http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/350299?res=3hourly&key=dd35e920-4aff-4299-ac3b-11208b2ea163
+
+
+
+<SiteRep>
+<Wx>
+<Param name="F" units="C">Feels Like Temperature</Param>
+<Param name="G" units="mph">Wind Gust</Param>
+<Param name="H" units="%">Screen Relative Humidity</Param>
+<Param name="T" units="C">Temperature</Param>
+<Param name="V" units="">Visibility</Param>
+<Param name="D" units="compass">Wind Direction</Param>
+<Param name="S" units="mph">Wind Speed</Param>
+<Param name="U" units="">Max UV Index</Param>
+<Param name="W" units="">Weather Type</Param>
+<Param name="Pp" units="%">Precipitation Probability</Param>
+</Wx>
+<DV dataDate="2013-09-17T13:00:00Z" type="Forecast">
+<Location i="350299" lat="52.9236" lon="-1.2109" name="BEESTON (NOTTINGHAMSHIRE)" country="ENGLAND" continent="EUROPE">
+<Period type="Day" value="2013-09-17Z">
+<Rep D="WSW" F="8" G="20" H="74" Pp="28" S="11" T="11" V="GO" W="7" U="1">540</Rep>
+<Rep D="SW" F="8" G="16" H="84" Pp="85" S="9" T="10" V="PO" W="15" U="2">720</Rep>
+<Rep D="SSW" F="9" G="11" H="86" Pp="25" S="9" T="11" V="MO" W="7" U="1">900</Rep>
+<Rep D="NNE" F="10" G="2" H="93" Pp="25" S="2" T="10" V="MO" W="7" U="1">1080</Rep>
+<Rep D="WNW" F="9" G="7" H="93" Pp="15" S="4" T="10" V="GO" W="7" U="0">1260</Rep>
+</Period>
+<Period type="Day" value="2013-09-18Z">
+<Rep D="WNW" F="8" G="11" H="91" Pp="5" S="4" T="9" V="GO" W="7" U="0">0</Rep>
+<Rep D="W" F="7" G="13" H="91" Pp="2" S="7" T="9" V="GO" W="2" U="0">180</Rep>
+<Rep D="W" F="7" G="16" H="93" Pp="1" S="7" T="9" V="GO" W="3" U="1">360</Rep>
+<Rep D="WNW" F="10" G="16" H="83" Pp="4" S="9" T="11" V="GO" W="3" U="2">540</Rep>
+<Rep D="WNW" F="11" G="27" H="64" Pp="12" S="13" T="14" V="VG" W="7" U="3">720</Rep>
+<Rep D="WNW" F="11" G="29" H="58" Pp="1" S="16" T="14" V="VG" W="1" U="1">900</Rep>
+<Rep D="WNW" F="10" G="22" H="68" Pp="0" S="11" T="12" V="VG" W="1" U="1">1080</Rep>
+<Rep D="W" F="9" G="16" H="79" Pp="0" S="7" T="10" V="VG" W="0" U="0">1260</Rep>
+</Period>
+<Period type="Day" value="2013-09-19Z">
+<Rep D="WSW" F="8" G="16" H="84" Pp="3" S="9" T="10" V="GO" W="7" U="0">0</Rep>
+<Rep D="WSW" F="7" G="16" H="85" Pp="1" S="9" T="9" V="GO" W="2" U="0">180</Rep>
+<Rep D="SW" F="7" G="13" H="84" Pp="6" S="7" T="9" V="GO" W="7" U="1">360</Rep>
+<Rep D="SSW" F="8" G="18" H="88" Pp="81" S="9" T="10" V="MO" W="15" U="1">540</Rep>
+<Rep D="SSW" F="9" G="20" H="92" Pp="58" S="11" T="11" V="MO" W="12" U="1">720</Rep>
+<Rep D="WSW" F="12" G="22" H="88" Pp="26" S="13" T="14" V="GO" W="7" U="1">900</Rep>
+<Rep D="W" F="12" G="22" H="81" Pp="11" S="11" T="14" V="GO" W="3" U="1">1080</Rep>
+<Rep D="W" F="10" G="20" H="80" Pp="8" S="11" T="12" V="GO" W="2" U="0">1260</Rep>
+</Period>
+<Period type="Day" value="2013-09-20Z">
+<Rep D="W" F="9" G="20" H="85" Pp="4" S="11" T="11" V="GO" W="2" U="0">0</Rep>
+<Rep D="W" F="8" G="18" H="88" Pp="3" S="9" T="10" V="GO" W="0" U="0">180</Rep>
+<Rep D="W" F="8" G="13" H="91" Pp="1" S="7" T="9" V="GO" W="1" U="1">360</Rep>
+<Rep D="W" F="10" G="18" H="79" Pp="1" S="9" T="12" V="VG" W="3" U="1">540</Rep>
+<Rep D="W" F="13" G="18" H="66" Pp="1" S="9" T="15" V="VG" W="3" U="3">720</Rep>
+<Rep D="W" F="13" G="16" H="65" Pp="4" S="9" T="15" V="VG" W="7" U="1">900</Rep>
+<Rep D="W" F="13" G="13" H="70" Pp="4" S="7" T="14" V="VG" W="7" U="1">1080</Rep>
+<Rep D="W" F="12" G="9" H="77" Pp="4" S="4" T="13" V="VG" W="7" U="0">1260</Rep>
+</Period>
+<Period type="Day" value="2013-09-21Z">
+<Rep D="WSW" F="11" G="9" H="84" Pp="4" S="4" T="11" V="GO" W="7" U="0">0</Rep>
+<Rep D="WSW" F="10" G="9" H="87" Pp="5" S="4" T="10" V="GO" W="7" U="0">180</Rep>
+<Rep D="SW" F="9" G="9" H="90" Pp="5" S="4" T="10" V="GO" W="7" U="1">360</Rep>
+<Rep D="WSW" F="12" G="11" H="79" Pp="5" S="7" T="13" V="VG" W="7" U="1">540</Rep>
+<Rep D="WSW" F="15" G="16" H="67" Pp="5" S="7" T="16" V="VG" W="7" U="2">720</Rep>
+<Rep D="WSW" F="15" G="13" H="68" Pp="5" S="7" T="16" V="VG" W="7" U="1">900</Rep>
+<Rep D="WSW" F="15" G="9" H="76" Pp="5" S="4" T="16" V="VG" W="7" U="1">1080</Rep>
+<Rep D="SSW" F="14" G="9" H="82" Pp="5" S="4" T="14" V="GO" W="7" U="0">1260</Rep>
+</Period>
+</Location>
+</DV>
+</SiteRep>
+

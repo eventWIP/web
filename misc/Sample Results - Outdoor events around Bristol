@@ -1,0 +1,736 @@
+Outdoor Events in the next 5 days within 50 miles of Bristol
+http://www.skiddle.com/api/v1/events/?api_key=838cec44cf59198b22731f4be213988a&latitude=51.454515&longitude=-2.587373&radius=50&maxDate=2013-09-21&limit=100&offset=0&type=o
+
+
+{
+id: "11961138",
+eventname: "Billy Smart's Circus",
+venue: {
+id: 11790,
+name: "Royal Victoria Park",
+address: "Royal Avenue",
+town: "Bath",
+postcode: "BA1 2LT",
+phone: "",
+latitude: 51.3881499,
+longitude: -2.3961521,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus.jpg",
+link: "http://www.skiddle.com/whats-on/Bath/Royal-Victoria-Park/Billy-Smarts-Circus/11961138/",
+date: "2013-09-17",
+description: "The most famous name in British Circus is back to entertain you!",
+openingtimes: {
+doorsopen: "16:45",
+doorsclose: "21:30",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [
+{
+userid: "0",
+name: "Mike Lee",
+image: "http://graph.facebook.com/100002335376662/picture?type=square"
+},
+{
+userid: "0",
+name: "Tasha Jarvis",
+image: "http://graph.facebook.com/100001324486375/picture?type=square"
+}
+],
+imgoing: 0,
+entryprice: "Adult: £12-24. Child: £10-18 (Online discount avai",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [
+{
+artistid: "123514570",
+name: "Billy Smart's Circus",
+image: "http://artists.skiddlecdn.co.uk/0/123514570_1_th.jpg"
+}
+]
+},
+
+{
+id: "11936662",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/e/7/418732_0_great-british-walk_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/e/7/418732_0_great-british-walk.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936662/",
+date: "2013-09-17",
+description: "Great British Walk - Eye-catcher Walk (Self led)",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£2.50 fee",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11967044",
+eventname: "Streets of Eden",
+venue: {
+id: 3418,
+name: "The Grand Pavilion In Porthcawl",
+address: "The Grand Pavilion, The Esplanade",
+town: "Porthcawl",
+postcode: "CF36 3YW",
+phone: "",
+latitude: 51.47654,
+longitude: -3.707004,
+type: "Outdoors"
+},
+imageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+largeimageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+link: "http://www.skiddle.com/whats-on/Cardiff/The-Grand-Pavilion-In-Porthcawl/Streets-of-Eden/11967044/",
+date: "2013-09-17",
+description: "Photographic exhibition of Welsh carnivals and festivals",
+openingtimes: {
+doorsopen: "19:00",
+doorsclose: "21:00",
+lastentry: "21:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11962084",
+eventname: "Wales historic buildings and hidden gems set to Open Doors to thousands of visitors",
+venue: {
+id: 45094,
+name: "Caerphilly",
+address: "Various places ",
+town: "Caerphilly",
+postcode: "CF82 7",
+phone: "",
+latitude: 51.6330938,
+longitude: -3.2356196,
+type: "Outdoors"
+},
+imageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+largeimageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+link: "http://www.skiddle.com/whats-on/Cardiff/Caerphilly/Wales-historic-buildings-and-hidden-gems-set-to-Open-Doors-to-thousands-of-visitors/11962084/",
+date: "2013-09-17",
+description: "Wales&#8217;s much-loved museums, historic buildings and gems will welcome thousands of visitors this month as part of the annual Open Doors programme",
+openingtimes: {
+doorsopen: "21:00",
+doorsclose: "18:00",
+lastentry: "17:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11961140",
+eventname: "Billy Smart's Circus",
+venue: {
+id: 11790,
+name: "Royal Victoria Park",
+address: "Royal Avenue",
+town: "Bath",
+postcode: "BA1 2LT",
+phone: "",
+latitude: 51.3881499,
+longitude: -2.3961521,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus.jpg",
+link: "http://www.skiddle.com/whats-on/Bath/Royal-Victoria-Park/Billy-Smarts-Circus/11961140/",
+date: "2013-09-18",
+description: "The most famous name in British Circus is back to entertain you!",
+openingtimes: {
+doorsopen: "16:45",
+doorsclose: "21:30",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Adult: £12-24. Child: £10-18 (Online discount avai",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [
+{
+artistid: "123514570",
+name: "Billy Smart's Circus",
+image: "http://artists.skiddlecdn.co.uk/0/123514570_1_th.jpg"
+}
+]
+},
+
+{
+id: "11936856",
+eventname: "Discover Hidden Heritage Month",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month_th.jpg",
+largeimageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Discover-Hidden-Heritage-Month/11936856/",
+date: "2013-09-18",
+description: "Discover Hidden Heritage Month",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free event - normal admission prices apply",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936664",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/e/7/418732_0_great-british-walk_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/e/7/418732_0_great-british-walk.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936664/",
+date: "2013-09-18",
+description: "Great British Walk - Eye-catcher Walk (Self led)",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£2.50 fee",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11937062",
+eventname: "Behind the Scenes Tour",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+largeimageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Behind-the-Scenes-Tour/11937062/",
+date: "2013-09-19",
+description: "Behind the Scenes Tour",
+openingtimes: {
+doorsopen: "12:00",
+doorsclose: "13:00",
+lastentry: "12:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free - normal admission prices apply",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11961142",
+eventname: "Billy Smart's Circus",
+venue: {
+id: 11790,
+name: "Royal Victoria Park",
+address: "Royal Avenue",
+town: "Bath",
+postcode: "BA1 2LT",
+phone: "",
+latitude: 51.3881499,
+longitude: -2.3961521,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus.jpg",
+link: "http://www.skiddle.com/whats-on/Bath/Royal-Victoria-Park/Billy-Smarts-Circus/11961142/",
+date: "2013-09-19",
+description: "The most famous name in British Circus is back to entertain you!",
+openingtimes: {
+doorsopen: "16:45",
+doorsclose: "21:30",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Adult: £12-24. Child: £10-18 (Online discount avai",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [
+{
+artistid: "123514570",
+name: "Billy Smart's Circus",
+image: "http://artists.skiddlecdn.co.uk/0/123514570_1_th.jpg"
+}
+]
+},
+
+{
+id: "11936858",
+eventname: "Discover Hidden Heritage Month",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month_th.jpg",
+largeimageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Discover-Hidden-Heritage-Month/11936858/",
+date: "2013-09-19",
+description: "Discover Hidden Heritage Month",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free event - normal admission prices apply",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936688",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936688/",
+date: "2013-09-19",
+description: "Great British Walk - Eye-catcher Walk (Self led)",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£2.50 fee",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11961144",
+eventname: "Billy Smart's Circus",
+venue: {
+id: 11790,
+name: "Royal Victoria Park",
+address: "Royal Avenue",
+town: "Bath",
+postcode: "BA1 2LT",
+phone: "",
+latitude: 51.3881499,
+longitude: -2.3961521,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/7/7/5/427960_0_billy-smarts-circus.jpg",
+link: "http://www.skiddle.com/whats-on/Bath/Royal-Victoria-Park/Billy-Smarts-Circus/11961144/",
+date: "2013-09-20",
+description: "The most famous name in British Circus is back to entertain you!",
+openingtimes: {
+doorsopen: "16:45",
+doorsclose: "21:30",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Adult: £12-24. Child: £10-18 (Online discount avai",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [
+{
+artistid: "123514570",
+name: "Billy Smart's Circus",
+image: "http://artists.skiddlecdn.co.uk/0/123514570_1_th.jpg"
+}
+]
+},
+
+{
+id: "11936860",
+eventname: "Discover Hidden Heritage Month",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month_th.jpg",
+largeimageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Discover-Hidden-Heritage-Month/11936860/",
+date: "2013-09-20",
+description: "Discover Hidden Heritage Month",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free event - normal admission prices apply",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936690",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936690/",
+date: "2013-09-20",
+description: "Great British Walk - Eye-catcher Walk (Self led)",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£2.50 fee",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11918328",
+eventname: "WubWubWub PROGRAMMED By Charlie May",
+venue: {
+id: 3043,
+name: "BASKERVILLE HALL",
+address: "Clyro Court - Hay-on-Wye - Powys - HR3 5LE",
+town: " Powys",
+postcode: "HR3 5LE",
+phone: "",
+latitude: 52.081074,
+longitude: -3.151634,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/2/2/4/412140_0_wubwubwub-programmed-by-charlie-may_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/2/2/4/412140_0_wubwubwub-programmed-by-charlie-may.jpg",
+link: "http://www.skiddle.com/whats-on/Hereford/BASKERVILLE-HALL/WubWubWub-PROGRAMMED-By-Charlie-May/11918328/",
+date: "2013-09-21",
+description: "The architect behind Sasha's 'Xpander', 'Scorchio' and 'Belfunk' and co-engineer of the albums 'Airdrawndagger', 'involver' and 'invol2ver'. ",
+openingtimes: {
+doorsopen: "18:00",
+doorsclose: "04:00",
+lastentry: "01:00:00"
+},
+genres: [ ],
+going: [
+{
+userid: "523332",
+name: "AubreyFry",
+image: "http://graph.facebook.com/635251026/picture?type=square"
+},
+{
+userid: "22785",
+name: "becka_fj",
+image: "http://graph.facebook.com/508783287/picture?type=square"
+},
+{
+userid: "0",
+name: "Besnik Koshi",
+image: "http://graph.facebook.com/665585277/picture?type=square"
+},
+{
+userid: "0",
+name: "Clyro Court",
+image: "http://graph.facebook.com/1240341779/picture?type=square"
+},
+{
+userid: "0",
+name: "Dan Crowley",
+image: "http://graph.facebook.com/1496276915/picture?type=square"
+},
+{
+userid: "0",
+name: "Dan Farnworth",
+image: "http://graph.facebook.com/508527455/picture?type=square"
+},
+{
+userid: "0",
+name: "Daniel Povey",
+image: "http://graph.facebook.com/509320153/picture?type=square"
+},
+{
+userid: "477822",
+name: "DanSanderson",
+image: "http://graph.facebook.com/550760109/picture?type=square"
+},
+{
+userid: "74548",
+name: "djcalvy",
+image: "http://graph.facebook.com/522575638/picture?type=square"
+},
+{
+userid: "0",
+name: "Elliott Cooke",
+image: "http://graph.facebook.com/507954585/picture?type=square"
+}
+],
+imgoing: 0,
+entryprice: "£10",
+tickets: true,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936862",
+eventname: "Discover Hidden Heritage Month",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month_th.jpg",
+largeimageurl: "http://listings8f.skiddlecdn.co.uk/a/a/4/418760_0_discover-hidden-heritage-month.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Discover-Hidden-Heritage-Month/11936862/",
+date: "2013-09-21",
+description: "Discover Hidden Heritage Month",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "Free event - normal admission prices apply",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936574",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+largeimageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936574/",
+date: "2013-09-21",
+description: "Great British Walk - RAF Defford (Guided Walk)",
+openingtimes: {
+doorsopen: "10:30",
+doorsclose: "12:45",
+lastentry: "10:30:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£1 per person",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11936692",
+eventname: "Great British Walk",
+venue: {
+id: 43962,
+name: "Croome National Trust",
+address: "National Trust Visitor Centre, Croome, Croome D'Abitot, Nr High Green",
+town: "Worcester",
+postcode: "WR8 9DW",
+phone: "",
+latitude: 52.1041988,
+longitude: -2.1644528,
+type: "Outdoors"
+},
+imageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk_th.jpg",
+largeimageurl: "http://listings07.skiddlecdn.co.uk/4/a/e/418736_0_great-british-walk.jpg",
+link: "http://www.skiddle.com/whats-on/Worcester/Croome-National-Trust/Great-British-Walk/11936692/",
+date: "2013-09-21",
+description: "Great British Walk - Eye-catcher Walk (Self led)",
+openingtimes: {
+doorsopen: "10:00",
+doorsclose: "17:00",
+lastentry: "16:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "£2.50 fee",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
+{
+id: "11962654",
+eventname: "Wales historic buildings and hidden gems set to Open Doors to thousands of visitors",
+venue: {
+id: 45122,
+name: "Monmouthshire ",
+address: "Monmouthshire ",
+town: "Monmouthshire ",
+postcode: "NP26 1",
+phone: "",
+latitude: 51.586398,
+longitude: -2.840953,
+type: "Outdoors"
+},
+imageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+largeimageurl: "http://skiddlecdn.co.uk/images/cities/default.jpg",
+link: "http://www.skiddle.com/whats-on/Newport/Monmouthshire---/Wales-historic-buildings-and-hidden-gems-set-to-Open-Doors-to-thousands-of-visitors/11962654/",
+date: "2013-09-21",
+description: "Wales&#8217;s much-loved museums, historic buildings and gems will welcome thousands of visitors this month as part of the annual Open Doors programme.",
+openingtimes: {
+doorsopen: "09:00",
+doorsclose: "18:00",
+lastentry: "17:00:00"
+},
+genres: [ ],
+going: [ ],
+imgoing: 0,
+entryprice: "free",
+tickets: false,
+ticketsAvail: null,
+currency: "GBP",
+artists: [ ]
+},
+
