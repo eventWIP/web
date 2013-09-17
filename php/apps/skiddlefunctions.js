@@ -4,7 +4,7 @@ function skiddlesearchon(){
 }
 
 function skiddlesearch(x,y,buffer){
-	var urlStr = "skiddlerequest.php?eventcode=FEST&latitude="+y+"&longitude="+x+"&radius="+buffer;
+	var urlStr = "apps/skiddlerequest.php?eventcode=FEST&latitude="+y+"&longitude="+x+"&radius="+buffer;
 	//alert(urlStr);
 	$.get(urlStr,function(data){
 		alert(data.toSource());
