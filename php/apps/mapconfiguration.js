@@ -42,8 +42,11 @@ function loadmap(){
     });
 	
 	// Load geojson of weather station locations
+	
+	//from answer to http://stackoverflow.com/questions/10368726/how-to-read-external-geojson-file-from-openlayers
+	
 	geojson_layer = new OpenLayers.Layer.Vector("GeoJSON", {
-                projection: epsg4326,
+                projection: "EPSG:4326",
                 strategies: [new OpenLayers.Strategy.Fixed()],
                 protocol: new OpenLayers.Protocol.HTTP({
                     url: "./data/weather_locations.json",
