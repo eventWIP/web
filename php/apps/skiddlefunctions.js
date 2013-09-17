@@ -35,5 +35,5 @@ function skiddlesearch(x,y,buffer){
 		} else {
 			alert("Sorry, your search did not return any results");
 		}
-	});
+	}});
 }
