@@ -1,0 +1,59 @@
+Code to find nearest feature point using Open Layers
+The key code is on lines 51 and 52
+--------------------------------------------
+
+http://jsfiddle.net/XfEmn/
+--------------------------------------------
+
+
+
+(function() {
+
+    //util func for creating some poitn features
+    function createFeatures () {
+        var points = [
+            {"lon": 10, "lat": 60},
+            {"lon": -10, "lat": 40},
+            {"lon": 30, "lat": 30},
+            {"lon": 20, "lat": 20}
+        ];
+    
+        return _.map(points, function(point, idx) {
+            var p = new OpenLayers.Geometry.Point(point.lon, point.lat).transform(new OpenLayers.Projection("EPSG:4326"), new OpenLayers.Projection("EPSG:900913"));
+            return new OpenLayers.Feature.Vector(p, {"index": idx});
+        });
+    }
+
+    var map = new OpenLayers.Map({
+        div: "map",
+        theme: null,
+        
+        layers: [
+            new OpenLayers.Layer.OSM("OpenStreetMap", null, {
+                transitionEffect: "resize"              
+            })
+        ],
+        center: new OpenLayers.LonLat(0, 0),
+        zoom: 1
+    }); 
+    
+    var nodeLayer = new OpenLayers.Layer.Vector();
+    nodeLayer.addFeatures(createFeatures());
+    map.addLayer(nodeLayer);
+    
+    var selectFeatureControl = new OpenLayers.Control.SelectFeature(nodeLayer);
+    map.addControl(selectFeatureControl);
+    
+    map.events.register("click", map,  function(e) {
+        selectFeatureControl.deactivate();
+        var pos = this.getLonLatFromPixel(e.xy);        
+        var point =  new OpenLayers.Geometry.Point(pos.lon, pos.lat);
+        var closest =_.min(nodeLayer.features, function(feature) {
+            return feature.geometry.distanceTo(point);
+        });
+        selectFeatureControl.activate();
+        selectFeatureControl.select(closest);        
+    });
+    
+}());
+ 
