@@ -41,6 +41,19 @@ function loadmap(){
         center: new OpenLayers.LonLat(405000,285000).transform(new OpenLayers.Projection("EPSG:27700"),new OpenLayers.Projection("EPSG:900913"))
     });
 	
+	// Load geojson of weather station locations
+	geojson_layer = new OpenLayers.Layer.Vector("GeoJSON", {
+                projection: epsg4326,
+                strategies: [new OpenLayers.Strategy.Fixed()],
+                protocol: new OpenLayers.Protocol.HTTP({
+                    url: "./data/weather_locations.json",
+                    format: new OpenLayers.Format.GeoJSON()
+                })
+            });
+       
+            map.addLayer(geojson_layer);
+
+	
 	//Define the mapPanel
 	mapPanel = new GeoExt.MapPanel({
 		region: 'center', 
