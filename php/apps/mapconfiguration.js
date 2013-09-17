@@ -158,6 +158,7 @@ function eventHandle(e){
 	
 	//Call the search
 	skiddleresult = skiddlesearch(e.x,e.y,document.getElementById('buffersize').value);
+	alert(skiddleresult);
 	
 	//Deactivate the tool
 	skiddlePoint.deactivate();
