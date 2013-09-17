@@ -9,7 +9,7 @@ function skiddlesearch(x,y,buffer){
 		if(data.responsetext!==null){
 			var returnArray = data.results;
 			event_info ={};
-			$.each(returnArray, function(key, event_result)) {
+			$.each(returnArray, function(key, event_result) {
 				event_obj = {
 					"event_name": event_result.eventname,
 					"venue_name": event_result.venue.name,
@@ -28,7 +28,7 @@ function skiddlesearch(x,y,buffer){
 				};
 
 				event_info[event_result.id] = event_obj;
-			}
+			});
 			
 		return event_info;
 			
