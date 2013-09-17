@@ -29,7 +29,7 @@ function skiddlesearch(x,y,buffer){
 
 				event_info[event_result.id] = event_obj;
 			});
-			
+		alert(event_info);	
 		return event_info;
 			
 		} else {
