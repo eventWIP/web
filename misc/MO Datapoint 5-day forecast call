@@ -53,6 +53,11 @@ NA	Not available
 
 
 Used Beeston as Location
+
+JSON
+http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/350299?res=3hourly&key=dd35e920-4aff-4299-ac3b-11208b2ea163
+
+XML
 http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/350299?res=3hourly&key=dd35e920-4aff-4299-ac3b-11208b2ea163
 
 
