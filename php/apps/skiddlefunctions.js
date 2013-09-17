@@ -5,7 +5,7 @@ function skiddlesearchon(){
 
 function skiddlesearch(x,y,buffer){
 	var urlStr = "apps/skiddlerequest.php?eventcode=FEST&latitude="+y+"&longitude="+x+"&radius="+buffer;
-	$.get(urlStr,function(data){
+	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data.responsetext!==null){
 			var returnArray = data.results;
 			event_info ={};
