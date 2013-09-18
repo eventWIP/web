@@ -319,7 +319,7 @@ function generate_points(s){
 			event_price: detail.event_price,
 			fb_attend:detail.fb_yes,
 			fb_maybe:detail.fb_maybe,
-			twit_score:detail.twit_score
+			twit_score:detail.twit_score,
 			w_type: detail.w_type
 		}
 		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
