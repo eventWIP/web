@@ -263,7 +263,7 @@ function generate_points(s){
 			fb_maybe:detail.fb_maybe
 		}
 		alert(detail.venue_long + ", " + detail.venue_lat);
-		var event_location = new OpenLayers.LonLat(detail.venue_long, detail.venue_lat);
+		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
 		alert(event_location);
 		//var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
 		var newEvent = new OpenLayers.Feature.Vector(event_location);
