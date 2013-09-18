@@ -262,7 +262,8 @@ function generate_points(s){
 			fb_maybe:detail.fb_maybe
 		}
 		var event_location = new OpenLayers.LonLat(detail.long, detail.lat);
-		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
+		//var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
+		var newEvent = new OpenLayers.Feature.Vector(event_location);
 		eventPoints.addFeatures(newEvent);
 	});
 }
