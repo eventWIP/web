@@ -8,7 +8,7 @@ function skiddlesearch(x,y,buffer,v){
 		var venue_t = '';
 	}
 	else {
-		venue_t = 'v'
+		venue_t = v;
 		
 	}
 	var urlStr = "apps/skiddlerequest.php?eventcode=" + venue_t + "&latitude="+y+"&longitude="+x+"&radius="+buffer;
