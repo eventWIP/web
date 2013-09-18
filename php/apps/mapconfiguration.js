@@ -126,8 +126,10 @@ function loadmap(){
 		zoom: 10
 	});
 	
-	var searchContent = 'Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles<br />';
-	searchContent += '<input type="button" value="Select Location on Map" onclick="skiddlesearchon()" />'; 
+	var searchContent = '<table class="neat"><tr><td><b>Search Options</b></td></tr><tr><td>Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles</td></tr>';
+	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
+	searchContent += '</table>'
+	searchContent += '<div id="loading" class="hideLoad">Loading, please wait...<br /><img src="img/loader.gif" /></div>'
 	
 	searchPanel = new Ext.Panel({
 		title: "Event Search",
@@ -235,6 +237,9 @@ function geoLocation(){
 }
 
 function eventHandle(e){
+	//Set the loader going
+	document.getElementById('loading').className = 'showLoad';
+	
 	//Pickup the location
 	var lonlat = e;
 	
@@ -287,4 +292,7 @@ function generate_points(s){
 		eventPoints.addFeatures(newEvent);
 	});
 	eventPoints.refresh({force:true});
+	
+	//Set the loader going
+	document.getElementById('loading').className = 'hideLoad';
 }
