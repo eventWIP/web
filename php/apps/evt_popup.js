@@ -26,7 +26,8 @@ function evt_pop(e, type){
 			//Status cases go here
 			obj_html += "<br />";
 			//Add the icon
-			obj_html += "<img src='"+ e.attributes.w_type +"/' />";
+			//obj_html += "<img src='"+ e.attributes.w_type +"/' />";
+			obj_html += "<img src='img/cloud.png' />";
 			
 			window[obj_name] = new OpenLayers.Popup("chicken",
 				event_location,
