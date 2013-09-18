@@ -1,6 +1,6 @@
 function twitter_search(terms){
 var score
-var urlStr = "/twitter_search.php?terms="+terms;
+var urlStr = "apps/twitter/twitter_search.php?terms="+terms;
 //alert(urlStr);
 $.ajax({url:urlStr,async:false,success:function(data){
 score = data.statuses.length/100
