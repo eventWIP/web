@@ -191,6 +191,18 @@ function loadmap(){
 		renderers: renderer,
 		styleMap: hosm
 	});
+	
+	//event stuff
+	
+	eventPoints.events.on({
+                "featureselected": function(e) {
+                    showStatus("selected feature "+e.feature.attributes.event_name+" on Vector Layer 1");
+                },
+                "featureunselected": function(e) {
+                    showStatus("unselected feature "+e.feature.attributes.event_name+" on Vector Layer 1");
+                }
+            });
+	
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
     renderer = (renderer) ? [renderer] : OpenLayers.Layer.Vector.prototype.renderers;   
 	map.addLayers([pointLayer, eventPoints]);
@@ -204,6 +216,10 @@ function loadmap(){
 	
 	geoLocation();
 
+}
+
+function showStatus(message){
+	alert(message);
 }
 
 function findNearestWeatherStation(x,y,date) {
