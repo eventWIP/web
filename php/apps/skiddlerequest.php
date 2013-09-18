@@ -9,9 +9,16 @@
 	$longitude = $_GET['longitude'];
 	$radius = $_GET['radius'];
 	
-	//Create a URL
-	$url = "http://www.skiddle.com/api/v1/events/?api_key=" . $api_key . "&eventcode=" . $eventcode . "&latitude=";
-	$url .= $latitude . "&longitude=" . $longitude . "&radius=" . $radius;
+	//String validation
+	if (eventcode===''){
+		//Create a URL
+		$url = "http://www.skiddle.com/api/v1/events/?api_key=" . $api_key . "&latitude=";
+		$url .= $latitude . "&longitude=" . $longitude . "&radius=" . $radius;	
+	} else {
+		//Create a URL
+		$url = "http://www.skiddle.com/api/v1/events/?api_key=" . $api_key . "&eventcode=" . $eventcode . "&latitude=";
+		$url .= $latitude . "&longitude=" . $longitude . "&radius=" . $radius;
+	}
 	
 	//Obtain a response from the server
 	$response = file_get_contents($url);
