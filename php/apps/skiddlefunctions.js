@@ -14,6 +14,7 @@ function skiddlesearch(x,y,buffer,v){
 			var returnArray = data.results;
 			
 			$.each(returnArray, function(key, event_result) {
+				if(event_result.venue.type=='o'){
 				event_obj = {
 					"event_name": event_result.eventname,
 					"venue_name": event_result.venue.name,
@@ -32,6 +33,7 @@ function skiddlesearch(x,y,buffer,v){
 				};
 
 				event_info[event_result.id] = event_obj;
+					}
 			});
 			
 		
