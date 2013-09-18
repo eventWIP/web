@@ -1,0 +1,16 @@
+.neat{
+   background-color: #6699FF;
+   cell-padding: 4;
+}
+
+#loading{
+  text-align: center;
+}
+
+.hideLoad{
+  display: block;
+}
+
+.showLoad{
+  display: none;
+}
