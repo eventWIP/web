@@ -54,7 +54,7 @@ function loadmap(){
                 })
             });
        
-            map.addLayer(geojson_layer);
+            //map.addLayer(geojson_layer);
 
 	
 	//Define the mapPanel
