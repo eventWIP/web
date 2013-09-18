@@ -193,7 +193,10 @@ function loadmap(){
 
 function findNearestWeatherStation(x,y) {
 var min = 1000000000000000;
-			var minFeat = null;
+	var minFeat = null;
+			
+	if geojson_layer.features.length > 0 {
+			
 			for (var i = 0; i < geojson_layer.features.length; i++) {
 				var dist = Math.sqrt(
 				Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
@@ -214,6 +217,7 @@ var min = 1000000000000000;
 	alert(weatherResult[key].weather_station_name)
 
 	});
+			}
 }
 
 function geoLocation(){
