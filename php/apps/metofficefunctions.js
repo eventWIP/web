@@ -2,10 +2,11 @@ function metofficesearch(location_id,date){
 
 	var urlStr = "apps/metofficerequest.php?location_id="+location_id;
 	weather_info ={};
+	var w_type = ''
 	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data !== 0){
 			var day_array = data.SiteRep.DV.Location.Period;
-			var w_type = ''
+			
 			$.each(day_array,function(key,obj){
 				
 				if (obj.value == date){
