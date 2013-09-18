@@ -110,7 +110,10 @@ function loadmap(){
 			//alert (closest.attributes.id)
         //});
         //selectFeatureControl.activate();
-        //selectFeatureControl.select(closest);        
+        //selectFeatureControl.select(closest);   
+        
+        //Call the popup bubble script
+        evt_pop(e);
     });
 	
 	
@@ -328,6 +331,6 @@ function generate_points(s){
 	});
 	eventPoints.refresh({force:true});
 	
-	//Set the loader going
+	//Set the loader off
 	document.getElementById('loading').className = 'hideLoad';
 }
