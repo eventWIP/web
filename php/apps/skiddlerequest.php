@@ -10,7 +10,7 @@
 	$radius = $_GET['radius'];
 	
 	//String validation
-	if (eventcode===''){
+	if ($eventcode===''){
 		//Create a URL
 		$url = "http://www.skiddle.com/api/v1/events/?api_key=" . $api_key . "&latitude=";
 		$url .= $latitude . "&longitude=" . $longitude . "&radius=" . $radius;	
