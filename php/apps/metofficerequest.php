@@ -8,7 +8,7 @@
 
 	//Create a URL
 	
-	$url = "http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/xml/" . $location_id . "?res=3hourly&key=" . $api_key
+	$url = "http://datapoint.metoffice.gov.uk/public/data/val/wxfcs/all/json/" . $location_id . "?res=3hourly&key=" . $api_key;
 	
 	//Obtain a response from the server
 	$response = file_get_contents($url);
