@@ -14,7 +14,7 @@ function metofficesearch(location_id){
 				
 				};
 
-				event_info[weather_result.i] = weather_obj;
+				weather_info[weather_result.i] = weather_obj;
 			});
 
 
