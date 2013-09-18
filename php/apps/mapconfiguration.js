@@ -206,9 +206,10 @@ function loadmap(){
 
 }
 
-function findNearestWeatherStation(x,y) {
+function findNearestWeatherStation(x,y,date) {
 var min = 1000000000000000;
 	var minFeat = null;
+	date = date +'Z'
 			
 	if (geojson_layer.features.length > 0) {
 			
@@ -287,7 +288,7 @@ function eventHandle(e){
 
 
 	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long)
-	findNearestWeatherStation(obj.venue_lat,obj.venue_long)
+	findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date)
 	skiddleresult[key].fb_yes = fb_attend.attending
 	skiddleresult[key].fb_maybe = fb_attend.maybe
 	skiddleresult[key].twit_score = twitter_search(obj.event_name)
