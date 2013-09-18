@@ -1,5 +1,5 @@
 var map, bounds, mapPanel, accordian, viewport, searchPanel;
-var osm, skiddlePoint, poiSaveStrategy, skiddleresult, eventPoints;
+var osm, skiddlePoint, poiSaveStrategy, skiddleresult,weatherResult, eventPoints;
 Proj4js.defs["EPSG:27700"] = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs";
 Proj4js.defs["EPSG:4326"] = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
 
@@ -206,7 +206,13 @@ var min = 1000000000000000;
 			}
 			var closest = minFeat;
 			alert (closest.attributes.id);	
-			metofficesearch(closest.attributes.id);
+			weatherResult = metofficesearch(closest.attributes.id);
+			
+	$.each(weatherResult,function(key,obj){
+
+	alert(weatherResult[key].weather_station_name)
+
+	});
 }
 
 function geoLocation(){
@@ -253,8 +259,8 @@ function eventHandle(e){
 	$.each(skiddleresult,function(key,obj){
 
 
-	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_lat)
-	
+	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_lon)
+	findNearestWeatherStation(obj.venue_lat,obj.venue_lon)
 	skiddleresult[key].fb_yes = fb_attend.attending
 	skiddleresult[key].fb_maybe = fb_attend.maybe
 	skiddleresult[key].twit_score = twitter_search(obj.event_name)
