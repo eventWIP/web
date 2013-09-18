@@ -156,10 +156,20 @@ function eventHandle(e){
 	//Convert latlon to WGS84 latlon
 	lonlat = lonlat.transform(new OpenLayers.Projection("EPSG:900913"),new OpenLayers.Projection("EPSG:4326"));
 	
-	//Call the search
+	//Call the searches
+	//skiddle here
 	skiddleresult = skiddlesearch(e.x,e.y,document.getElementById('buffersize').value);
-	alert(skiddleresult);
+	//Facebook here
+	facebookresult = "";
+	
+	//Process the searches to create the relevant points on the map
+	generate_points(skiddleresult, facebookresult);
 	
 	//Deactivate the tool
 	skiddlePoint.deactivate();
+}
+
+function generate_points(s, f){
+	
+	
 }
