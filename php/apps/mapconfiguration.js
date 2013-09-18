@@ -315,7 +315,8 @@ function generate_points(s){
 			event_imageurl: detail.event_imageurl,
 			event_price: detail.event_price,
 			fb_attend:detail.fb_yes,
-			fb_maybe:detail.fb_maybe
+			fb_maybe:detail.fb_maybe,
+			twit_score:detail.twit_score
 		}
 		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
 		event_location = event_location.transform(proj, map.getProjectionObject());
