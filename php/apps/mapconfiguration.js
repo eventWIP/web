@@ -80,21 +80,23 @@ function loadmap(){
         //var closest =_.min(geojson_layer.features, function(feature) {
             //return feature.geometry.distanceTo(point);
 			
-			var min = 1000000000000000;
-			var minFeat = null;
-			for (var i = 0; i < geojson_layer.features.length; i++) {
-				var dist = Math.sqrt(
-				Math.pow(point.x - geojson_layer.features[i].geometry.x, 2) + 
-				Math.pow(point.y - geojson_layer.features[i].geometry.y, 2))
-				//features[i].style = { visibility: 'hidden' };
-				if (dist < min) {
-					minFeat = geojson_layer.features[i];
-					
-				min = dist;
-				}
-			}
-			var closest = minFeat;
-			alert (closest.attributes.id)
+			findNearestWeatherStation(point.x,point.y)
+			
+			//var min = 1000000000000000;
+			//var minFeat = null;
+			//for (var i = 0; i < geojson_layer.features.length; i++) {
+			//	var dist = Math.sqrt(
+			//	Math.pow(point.x - geojson_layer.features[i].geometry.x, 2) + 
+			//	Math.pow(point.y - geojson_layer.features[i].geometry.y, 2))
+			//	//features[i].style = { visibility: 'hidden' };
+			//	if (dist < min) {
+			//		minFeat = geojson_layer.features[i];
+			//		
+			//	min = dist;
+			//	}
+			//}
+			//var closest = minFeat;
+			//alert (closest.attributes.id)
         //});
         //selectFeatureControl.activate();
         //selectFeatureControl.select(closest);        
@@ -165,6 +167,24 @@ function loadmap(){
 	
 	geoLocation();
 
+}
+
+function findNearestWeatherStation(x,y) {
+var min = 1000000000000000;
+			var minFeat = null;
+			for (var i = 0; i < geojson_layer.features.length; i++) {
+				var dist = Math.sqrt(
+				Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
+				Math.pow(y - geojson_layer.features[i].geometry.y, 2))
+				//features[i].style = { visibility: 'hidden' };
+				if (dist < min) {
+					minFeat = geojson_layer.features[i];
+					
+				min = dist;
+				}
+			}
+			var closest = minFeat;
+			alert (closest.attributes.id)	
 }
 
 function geoLocation(){
