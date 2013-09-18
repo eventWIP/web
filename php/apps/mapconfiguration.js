@@ -209,7 +209,7 @@ var min = 1000000000000000;
 				}
 			}
 			var closest = minFeat;
-			if(closest.attributes.id!==null){
+			if(closest!==null){
 				alert (closest.attributes.id);	
 				weatherResult = metofficesearch(closest.attributes.id);
 			}
