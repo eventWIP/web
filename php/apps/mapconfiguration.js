@@ -58,6 +58,7 @@ function loadmap(){
 
 
 		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
+    
     map.addControl(selectFeatureControl);
     
 	//from http://jsfiddle.net/XfEmn/
