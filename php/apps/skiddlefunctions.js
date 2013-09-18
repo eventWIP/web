@@ -7,6 +7,10 @@ function skiddlesearch(x,y,buffer,v){
 	if (typeof v=='undefined'){
 		var venue_t = '';
 	}
+	else {
+		venue_t = 'v'
+		
+	}
 	var urlStr = "apps/skiddlerequest.php?eventcode=" + venue_t + "&latitude="+y+"&longitude="+x+"&radius="+buffer;
 	event_info ={};
 	$.ajax({url:urlStr,async:false,success:function(data){
