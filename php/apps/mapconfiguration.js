@@ -1,5 +1,5 @@
 var map, bounds, mapPanel, accordian, viewport, searchPanel;
-var osm, skiddlePoint, poiSaveStrategy, skiddleresult,weatherResult, eventPoints;
+var osm, skiddlePoint, poiSaveStrategy, skiddleresult,weatherResult, eventPoints,selectEventsControl;
 Proj4js.defs["EPSG:27700"] = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs";
 Proj4js.defs["EPSG:4326"] = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
 
@@ -194,6 +194,19 @@ function loadmap(){
 	
 	//event stuff
 	
+	selectEventsControl = new OpenLayers.Control.SelectFeature(
+                [eventPoints],
+                {
+                    clickout: true, toggle: false,
+                    multiple: false, hover: false,
+                    toggleKey: "ctrlKey", // ctrl key removes from selection
+                    multipleKey: "shiftKey" // shift key adds to selection
+                }
+            );
+            
+            map.addControl(selectEventsControl);
+            
+	
 	eventPoints.events.on({
                 "featureselected": function(e) {
                     showStatus("selected feature "+e.feature.attributes.event_name+" on Vector Layer 1");
@@ -347,4 +360,6 @@ function generate_points(s){
 	
 	//Set the loader off
 	document.getElementById('loading').className = 'hideLoad';
+	
+	selectEventsControl.activate();
 }
