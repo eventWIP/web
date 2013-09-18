@@ -223,7 +223,7 @@ var min = 1000000000000000;
 		}
 		var closest = minFeat;
 		if(closest!==null){
-				alert (closest.attributes.id);	
+				//alert (closest.attributes.id);	
 				weatherResult = metofficesearch(closest.attributes.id);
 			
 			
