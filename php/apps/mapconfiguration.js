@@ -211,8 +211,10 @@ var min = 1000000000000000;
 			
 		for (var i = 0; i < geojson_layer.features.length; i++) {
 			var dist = Math.sqrt(
-			Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
-			Math.pow(y - geojson_layer.features[i].geometry.y, 2))
+			//Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
+			//Math.pow(y - geojson_layer.features[i].geometry.y, 2))
+			Math.pow(x - geojson_layer.features[i].attributes.lon, 2) + 
+			Math.pow(y - geojson_layer.features[i].attributes.lat, 2))
 			//features[i].style = { visibility: 'hidden' };
 			if (dist < min) {
 				minFeat = geojson_layer.features[i];
@@ -279,8 +281,8 @@ function eventHandle(e){
 	$.each(skiddleresult,function(key,obj){
 
 
-	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_lon)
-	findNearestWeatherStation(obj.venue_lat,obj.venue_lon)
+	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long)
+	findNearestWeatherStation(obj.venue_lat,obj.venue_long)
 	skiddleresult[key].fb_yes = fb_attend.attending
 	skiddleresult[key].fb_maybe = fb_attend.maybe
 	skiddleresult[key].twit_score = twitter_search(obj.event_name)
