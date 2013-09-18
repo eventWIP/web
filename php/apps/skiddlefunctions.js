@@ -5,10 +5,11 @@ function skiddlesearchon(){
 
 function skiddlesearch(x,y,buffer){
 	var urlStr = "apps/skiddlerequest.php?eventcode=FEST&latitude="+y+"&longitude="+x+"&radius="+buffer;
+	event_info ={};
 	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data.responsetext!==null){
 			var returnArray = data.results;
-			event_info ={};
+			
 			$.each(returnArray, function(key, event_result) {
 				event_obj = {
 					"event_name": event_result.eventname,
@@ -29,11 +30,14 @@ function skiddlesearch(x,y,buffer){
 
 				event_info[event_result.id] = event_obj;
 			});
-		alert(event_info);	
-		return event_info;
+			
+		
 			
 		} else {
 			alert("Sorry, your search did not return any results");
 		}
 	}});
+	
+	return event_info;
+	
 }
