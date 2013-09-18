@@ -32,7 +32,7 @@ function metofficesearch(location_id,date){
 '29':'/img/heavy rain.png',
 '30':'/img/heavy rain.png'}
 
-	}
+	
 
 	var urlStr = "apps/metofficerequest.php?location_id="+location_id;
 	weather_info ={};
