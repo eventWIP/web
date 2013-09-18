@@ -60,6 +60,6 @@ function metofficesearch(location_id,date){
 		}
 	}});
 
-	return w_type;
+	return img_obj[w_type];
 	
 }
