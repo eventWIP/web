@@ -21,7 +21,7 @@ function evt_pop(e){
 		obj_html += "There are " + e.attributes.fb_attend + " attending & " + e.attributes.fb_maybe + " maybe according to Facebook <br />";
 		obj_html += "The event scored " + e.attributes.twit_score + " on our Twitter populatity test <br />";
 		//if (e.attributes.event_date within 5 days){
-		obj_html += "Based on the current weather forcast this event has been given a status of ";
+		obj_html += "Weather Description: ";
 		//Status cases go here
 		obj_html += "<br />";
 		//Add the icon
