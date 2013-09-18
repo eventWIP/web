@@ -205,14 +205,16 @@ function loadmap(){
             );
             
             map.addControl(selectEventsControl);
-            
+
+
+	            
 	
 	eventPoints.events.on({
                 "featureselected": function(e) {
-                    showStatus("selected feature "+e.feature.attributes.event_name+" on Vector Layer 1");
+                    evt_pop(e.feature,'on');
                 },
                 "featureunselected": function(e) {
-                    showStatus("unselected feature "+e.feature.attributes.event_name+" on Vector Layer 1");
+                    evt_pop(e.feature,'off');
                 }
             });
 	
