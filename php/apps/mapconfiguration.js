@@ -197,29 +197,30 @@ var min = 1000000000000000;
 			
 	if (geojson_layer.features.length > 0) {
 			
-			for (var i = 0; i < geojson_layer.features.length; i++) {
-				var dist = Math.sqrt(
-				Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
-				Math.pow(y - geojson_layer.features[i].geometry.y, 2))
-				//features[i].style = { visibility: 'hidden' };
-				if (dist < min) {
-					minFeat = geojson_layer.features[i];
-					
-				min = dist;
-				}
+		for (var i = 0; i < geojson_layer.features.length; i++) {
+			var dist = Math.sqrt(
+			Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
+			Math.pow(y - geojson_layer.features[i].geometry.y, 2))
+			//features[i].style = { visibility: 'hidden' };
+			if (dist < min) {
+				minFeat = geojson_layer.features[i];
+				
+			min = dist;
 			}
-			var closest = minFeat;
-			if(closest!==null){
+		}
+		var closest = minFeat;
+		if(closest!==null){
 				alert (closest.attributes.id);	
 				weatherResult = metofficesearch(closest.attributes.id);
-			}
 			
-	$.each(weatherResult,function(key,obj){
-
-	alert(weatherResult[key].weather_station_name)
-
-	});
-			}
+			
+			$.each(weatherResult,function(key,obj){
+			
+				alert(weatherResult[key].weather_station_name)
+			
+			});
+		}
+	}
 }
 
 function geoLocation(){
