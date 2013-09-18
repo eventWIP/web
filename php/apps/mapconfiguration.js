@@ -138,7 +138,7 @@ function loadmap(){
 	});
 	
 	var searchContent = '<table class="neat"><tr><td><b>Search Options</b></td></tr><tr><td>Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles</td></tr>';
-	searchContent += '<tr><td>Event Type: <input type="input" id="etype" value="FEAT" size="20" /></td></tr>';
+	searchContent += '<tr><td>Event Type: <input type="input" id="etype" value="FEAT" size="10" /></td></tr>';
 	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
 	searchContent += '</table>'
 	searchContent += '<div id="loading" class="hideLoad">Loading, please wait...<br /><img src="img/loader.gif" /></div>'
@@ -276,7 +276,10 @@ function eventHandle(e){
 	
 	//Call the searches
 	//skiddle here
-	skiddleresult = skiddlesearch(e.x,e.y,document.getElementById('buffersize').value,document.getElementById('etype').value);
+	var ebuff = document.getElementById('buffersize').value;
+	var etype = document.getElementById('etype').value;
+	alert(etype);
+	skiddleresult = skiddlesearch(e.x,e.y,ebuff,etype);
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
 
