@@ -161,7 +161,18 @@ function eventHandle(e){
 	//skiddle here
 	skiddleresult = skiddlesearch(e.x,e.y,document.getElementById('buffersize').value);
 	//Facebook here
-	facebookresult = "";
+	$.each(skiddleresult,function(key,obj){
+
+
+	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_lat)
+	
+	skiddleresult[key].fb_yes = fb_attend.attending
+	skiddleresult[key].fb_maybe = fb_attend.maybe
+	
+	
+	
+	
+	});
 	
 	//Process the searches to create the relevant points on the map
 	generate_points(skiddleresult, facebookresult);
@@ -170,7 +181,7 @@ function eventHandle(e){
 	skiddlePoint.deactivate();
 }
 
-function generate_points(s, f){
+function generate_points(s){
 	eventPoints.removeAllFeatures();
 	$.each(s,function(key, detail){	
 		var attributes = {
@@ -182,7 +193,9 @@ function generate_points(s, f){
 			venue_type: detail.venue_type,
 			event_date: detail.event_date,
 			event_imageurl: detail.event_imageurl,
-			event_price: detail.event_price
+			event_price: detail.event_price,
+			fb_attend:detail.fb_yes,
+			fb_maybe:detail.fb_maybe
 		}
 		var event_location = new OpenLayers.LonLat(detail.long, detail.lat);
 		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
