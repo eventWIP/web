@@ -233,6 +233,7 @@ function eventHandle(e){
 	
 	skiddleresult[key].fb_yes = fb_attend.attending
 	skiddleresult[key].fb_maybe = fb_attend.maybe
+	skiddleresult[key].twit_score = twitter_search(obj.event_name)
 	
 	
 	
