@@ -264,8 +264,6 @@ function generate_points(s){
 		}
 		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
 		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
-		//var newEvent = new OpenLayers.Feature.Vector(event_location);
-		alert(newEvent);
 		eventPoints.addFeatures(newEvent);
 	});
 }
