@@ -17,7 +17,7 @@ function evt_pop(e, type){
 			if (e.attributes.event_price==0){
 				obj_html += " free. <br />";
 			} else {
-				obj_html += " ticket event. Tickets cost £" + e.attributes.event_price + " <br />";
+				obj_html += " ticket event. Tickets cost " + e.attributes.event_price + " <br />";
 			}
 			obj_html += "There are " + e.attributes.fb_attend + " attending & " + e.attributes.fb_maybe + " maybe according to Facebook <br />";
 			obj_html += "The event scored " + e.attributes.twit_score + " on our Twitter populatity test <br />";
