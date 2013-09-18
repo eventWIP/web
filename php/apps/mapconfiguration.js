@@ -266,4 +266,5 @@ function generate_points(s){
 		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
 		eventPoints.addFeatures(newEvent);
 	});
+	eventPoints.refresh({force:true});
 }
