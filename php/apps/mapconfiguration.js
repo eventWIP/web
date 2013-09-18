@@ -44,8 +44,8 @@ function loadmap(){
 	// Load geojson of weather station locations
 	//Style Map
 	var invisibleStyle = {
-		strokeOpacity: 1,
-		fillOpacity: 1
+		strokeOpacity: 0,
+		fillOpacity: 0
 	};
 	var invisibleSty = OpenLayers.Util.applyDefaults(invisibleStyle, OpenLayers.Feature.Vector.style["default"]);
 	
