@@ -30,7 +30,7 @@ function evt_pop(e, type){
 			
 			window[obj_name] = new OpenLayers.Popup("chicken",
 				event_location,
-		               	new OpenLayers.Size(200,200),
+		               	new OpenLayers.Size(300,200),
 		               	obj_html,
 		               	true);
 		
