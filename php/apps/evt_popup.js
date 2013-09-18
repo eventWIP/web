@@ -6,7 +6,7 @@ function evt_pop(e){
 	//Did we find anything?
 	if (obj_count !== 0){
 		var i = 0;
-		$.each(obj_grab,obj){
+		$.each(obj_grab,obj{
 			//Add the popup controls
 			var obj_name = "event_popup" + i;
 			var obj_html = ""
@@ -18,6 +18,6 @@ function evt_pop(e){
 		
 		    	map.addPopup(popup);
 		    	i = i + 1;
-		}
+		});
 	}
 }
