@@ -14,7 +14,7 @@ function skiddlesearch(x,y,buffer,v){
 			var returnArray = data.results;
 			
 			$.each(returnArray, function(key, event_result) {
-				if(event_result.venue.type=='o'){
+				if(event_result.venue.type=='Outdoors'){
 				event_obj = {
 					"event_name": event_result.eventname,
 					"venue_name": event_result.venue.name,
