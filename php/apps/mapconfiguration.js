@@ -229,7 +229,7 @@ var min = 1000000000000000;
 			
 			$.each(weatherResult,function(key,obj){
 			
-				alert(weatherResult[key].weather_station_name)
+				//alert(weatherResult[key].weather_station_name)
 			
 			});
 		}
