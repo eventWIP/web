@@ -54,7 +54,7 @@ function loadmap(){
                 })
             });
        
-            //map.addLayer(geojson_layer);
+            map.addLayer(geojson_layer);
 
 
 		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
