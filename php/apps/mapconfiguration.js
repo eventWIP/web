@@ -168,11 +168,12 @@ function loadmap(){
 		'default': HoverSty
 	});
 	
+	var proj = new OpenLayers.Projection("EPSG:4326");
+	
 	//Skiddle point layer
 	pointLayer = new OpenLayers.Layer.Vector("Point Layer", {renderers: renderer});
 	eventPoints = new OpenLayers.Layer.Vector("Events Layer", {
 		renderers: renderer,
-		projection: new OpenLayers.Projection("EPSG:4326"),
 		styleMap: hosm
 	});
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
@@ -294,6 +295,7 @@ function generate_points(s){
 			fb_maybe:detail.fb_maybe
 		}
 		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
+		event_location = event_location.transform(proj, map.getProjectionObject());
 		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
 		eventPoints.addFeatures(newEvent);
 	});
