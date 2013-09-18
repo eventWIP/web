@@ -44,7 +44,7 @@ function metofficesearch(location_id,date){
 			$.each(day_array,function(key,obj){
 				
 				if (obj.value == date){
-					w_type = img_obj[obj.Rep[0].W]
+					w_type = obj.Rep[0].W
 				}
 				
 				
