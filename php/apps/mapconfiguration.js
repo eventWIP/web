@@ -278,7 +278,6 @@ function eventHandle(e){
 	//skiddle here
 	var ebuff = document.getElementById('buffersize').value;
 	var etype = document.getElementById('etype').value;
-	alert(etype);
 	skiddleresult = skiddlesearch(e.x,e.y,ebuff,etype);
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
