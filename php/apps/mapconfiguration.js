@@ -184,8 +184,8 @@ var min = 1000000000000000;
 				}
 			}
 			var closest = minFeat;
-			alert (closest.attributes.id)	
-			metofficesearch(closest.attributes.id)
+			alert (closest.attributes.id);	
+			metofficesearch(closest.attributes.id);
 }
 
 function geoLocation(){
