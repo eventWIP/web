@@ -229,14 +229,10 @@ var min = 1000000000000000;
 		var closest = minFeat;
 		if(closest!==null){
 				//alert (closest.attributes.id);	
-				weatherResult = metofficesearch(closest.attributes.id);
+				weatherResult = metofficesearch(closest.attributes.id,date);
+				return weatherResult
 			
-			
-			$.each(weatherResult,function(key,obj){
-			
-				//alert(weatherResult[key].weather_station_name)
-			
-			});
+
 		}
 	}
 }
@@ -288,7 +284,7 @@ function eventHandle(e){
 
 
 	fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long)
-	findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date)
+	skiddleresult[key].w_type = findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date)
 	skiddleresult[key].fb_yes = fb_attend.attending
 	skiddleresult[key].fb_maybe = fb_attend.maybe
 	skiddleresult[key].twit_score = twitter_search(obj.event_name)
@@ -324,6 +320,7 @@ function generate_points(s){
 			fb_attend:detail.fb_yes,
 			fb_maybe:detail.fb_maybe,
 			twit_score:detail.twit_score
+			w_type: detail.w_type
 		}
 		var event_location = new OpenLayers.Geometry.Point(detail.venue_long, detail.venue_lat);
 		event_location = event_location.transform(proj, map.getProjectionObject());
