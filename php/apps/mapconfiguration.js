@@ -54,8 +54,51 @@ function loadmap(){
                 })
             });
        
-            //map.addLayer(geojson_layer);
+            map.addLayer(geojson_layer);
 
+
+		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
+    map.addControl(selectFeatureControl);
+    
+	//from http://jsfiddle.net/XfEmn/
+	
+	// var urlStr = "./data/weather_locations.json";
+	// $.get(urlStr,function(data){
+		// if(data.responsetext!==null){
+			// var returnArray = data.features;
+			// alert(returnArray[0]);
+		// } else {
+			// alert("Sorry, your search did not return any results");
+		// }
+	// });
+	
+    map.events.register("click", map,  function(e) {
+        selectFeatureControl.deactivate();
+        var pos = this.getLonLatFromPixel(e.xy);        
+        var point =  new OpenLayers.Geometry.Point(pos.lon, pos.lat);
+        //var closest =_.min(geojson_layer.features, function(feature) {
+            //return feature.geometry.distanceTo(point);
+			
+			var min = 1000000000000000;
+			var minFeat = null;
+			for (var i = 0; i < geojson_layer.features.length; i++) {
+				var dist = Math.sqrt(
+				Math.pow(point.x - geojson_layer.features[i].geometry.x, 2) + 
+				Math.pow(point.y - geojson_layer.features[i].geometry.y, 2))
+				//features[i].style = { visibility: 'hidden' };
+				if (dist < min) {
+					minFeat = geojson_layer.features[i];
+					
+				min = dist;
+				}
+			}
+			var closest = minFeat;
+			alert (closest.attributes.id)
+        //});
+        //selectFeatureControl.activate();
+        //selectFeatureControl.select(closest);        
+    });
+	
 	
 	//Define the mapPanel
 	mapPanel = new GeoExt.MapPanel({
