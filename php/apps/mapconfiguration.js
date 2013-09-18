@@ -42,6 +42,16 @@ function loadmap(){
     });
 	
 	// Load geojson of weather station locations
+	//Style Map
+	var invisibleStyle = {
+		strokeOpacity: 1,
+		fillOpacity: 1
+	};
+	var invisibleSty = OpenLayers.Util.applyDefaults(HoverStyle, OpenLayers.Feature.Vector.style["default"]);
+	
+	var insm = new OpenLayers.StyleMap({
+		'default': invisibleSty
+	});
 	
 	//from answer to http://stackoverflow.com/questions/10368726/how-to-read-external-geojson-file-from-openlayers
 	
@@ -54,7 +64,9 @@ function loadmap(){
                 })
             });
        
-            map.addLayer(geojson_layer);
+            map.addLayer(geojson_layer,{
+            	styleMap: insm
+            });
 
 
 		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
