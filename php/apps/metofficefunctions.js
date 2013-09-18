@@ -4,7 +4,7 @@ function metofficesearch(location_id,date){
 '1':'/img/sun.png',
 '2':'/img/cloud.png',
 '3':'/img/cloud.png',
-'4'':null,
+'4':null,
 '5':'/img/fog.png',
 '6':'/img/fog.png',
 '7':'/img/cloud.png',
