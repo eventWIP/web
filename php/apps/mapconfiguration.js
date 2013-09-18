@@ -262,9 +262,12 @@ function generate_points(s){
 			fb_attend:detail.fb_yes,
 			fb_maybe:detail.fb_maybe
 		}
+		alert(detail.long + ", " + detail.lat);
 		var event_location = new OpenLayers.LonLat(detail.long, detail.lat);
+		alert(event_location);
 		//var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
 		var newEvent = new OpenLayers.Feature.Vector(event_location);
+		alert(newEvent);
 		eventPoints.addFeatures(newEvent);
 	});
 }
