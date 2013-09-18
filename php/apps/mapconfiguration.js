@@ -168,7 +168,7 @@ function loadmap(){
 		'default': HoverSty
 	});
 	
-	var proj = new OpenLayers.Projection("EPSG:4326");
+	
 	
 	//Skiddle point layer
 	pointLayer = new OpenLayers.Layer.Vector("Point Layer", {renderers: renderer});
@@ -195,7 +195,7 @@ function findNearestWeatherStation(x,y) {
 var min = 1000000000000000;
 	var minFeat = null;
 			
-	if geojson_layer.features.length > 0 {
+	if (geojson_layer.features.length > 0) {
 			
 			for (var i = 0; i < geojson_layer.features.length; i++) {
 				var dist = Math.sqrt(
@@ -283,6 +283,9 @@ function eventHandle(e){
 }
 
 function generate_points(s){
+	
+	var proj = new OpenLayers.Projection("EPSG:4326");
+	
 	eventPoints.removeAllFeatures();
 	$.each(s,function(key, detail){	
 		var attributes = {
