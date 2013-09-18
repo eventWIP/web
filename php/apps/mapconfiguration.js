@@ -170,7 +170,7 @@ function loadmap(){
 	pointLayer = new OpenLayers.Layer.Vector("Point Layer", {renderers: renderer});
 	eventPoints = new OpenLayers.Layer.Vector("Events Layer", {
 		renderers: renderer,
-		projection: "EPSG:4326",
+		projection: new OpenLayers.Projection("EPSG:4326"),
 		styleMap: hosm
 	});
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
