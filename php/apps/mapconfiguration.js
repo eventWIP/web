@@ -54,7 +54,7 @@ function loadmap(){
                 })
             });
        
-            map.addLayer(geojson_layer);
+            //map.addLayer(geojson_layer);
 
 
 		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
@@ -219,7 +219,7 @@ function eventHandle(e){
 	});
 	
 	//Process the searches to create the relevant points on the map
-	generate_points(skiddleresult, facebookresult);
+	generate_points(skiddleresult);
 	
 	//Deactivate the tool
 	skiddlePoint.deactivate();
