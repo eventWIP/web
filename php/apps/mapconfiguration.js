@@ -1,5 +1,5 @@
 var map, bounds, mapPanel, accordian, viewport, searchPanel;
-var osm, skiddlePoint, poiSaveStrategy, skiddleresult;
+var osm, skiddlePoint, poiSaveStrategy, skiddleresult, eventPoints;
 Proj4js.defs["EPSG:27700"] = "+proj=tmerc +lat_0=49 +lon_0=-2 +k=0.9996012717 +x_0=400000 +y_0=-100000 +ellps=airy +datum=OSGB36 +units=m +no_defs";
 Proj4js.defs["EPSG:4326"] = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
 
@@ -107,9 +107,10 @@ function loadmap(){
 	
 	//Skiddle point layer
 	pointLayer = new OpenLayers.Layer.Vector("Point Layer", {renderers: renderer});
+	eventPoints = new OpenLayers.Layer.Vector("Events Layer", {renderers: renderer});
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
     renderer = (renderer) ? [renderer] : OpenLayers.Layer.Vector.prototype.renderers;   
-	map.addLayers([pointLayer]);
+	map.addLayers([pointLayer, eventPoints]);
 	
 	//Skiddle Search Tool
 	skiddlePoint = new OpenLayers.Control.DrawFeature(pointLayer, OpenLayers.Handler.Point);
@@ -170,6 +171,21 @@ function eventHandle(e){
 }
 
 function generate_points(s, f){
-	
-	
+	eventPoints.removeAllFeatures();
+	$.each(s,function(key, detail){	
+		var attributes = {
+			event_id: key,
+			event_name: detail.event_name,
+			venue_name: detail.venue_name,
+			venue_town: detail.venue.town,
+			venue_postcode: detail.venue_postcode,
+			venue_type: detail.venue_type,
+			event_date: detail.event_date,
+			event_imageurl: detail.event_imageurl,
+			event_price: detail.event_price
+		}
+		var event_location = new OpenLayers.LonLat(detail.long, detail.lat);
+		var newEvent = new OpenLayers.Feature.Vector(event_location, attributes);
+		eventPoints.addFeatures([newFeature]);
+	});
 }
