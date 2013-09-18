@@ -1,7 +1,8 @@
 .neat{
    width: 100%;
    background-color: #6699FF;
-   cell-padding: 4;
+   padding: 4;
+   font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
 #loading{
