@@ -47,7 +47,7 @@ function loadmap(){
 		strokeOpacity: 1,
 		fillOpacity: 1
 	};
-	var invisibleSty = OpenLayers.Util.applyDefaults(invisibleStyle, OpenLayers.Feature.Vector.style["default"]);
+	var invisibleSty = OpenLayers.Util.applyDefaults(HoverStyle, OpenLayers.Feature.Vector.style["default"]);
 	
 	var insm = new OpenLayers.StyleMap({
 		'default': invisibleSty
@@ -61,12 +61,11 @@ function loadmap(){
                 protocol: new OpenLayers.Protocol.HTTP({
                     url: "./data/weather_locations.json",
                     format: new OpenLayers.Format.GeoJSON()
-                })
+                }),
+                styleMap: insm
             });
        
-            map.addLayer(geojson_layer,{
-            	styleMap: insm
-            });
+            map.addLayer(geojson_layer);
 
 
 		var selectFeatureControl = new OpenLayers.Control.SelectFeature(geojson_layer);
@@ -213,8 +212,8 @@ var min = 1000000000000000;
 			var dist = Math.sqrt(
 			//Math.pow(x - geojson_layer.features[i].geometry.x, 2) + 
 			//Math.pow(y - geojson_layer.features[i].geometry.y, 2))
-			Math.pow(x - geojson_layer.features[i].attributes.lon, 2) + 
-			Math.pow(y - geojson_layer.features[i].attributes.lat, 2))
+			Math.pow(x - geojson_layer.features[i].attributes.longitude, 2) + 
+			Math.pow(y - geojson_layer.features[i].attributes.latitude, 2))
 			//features[i].style = { visibility: 'hidden' };
 			if (dist < min) {
 				minFeat = geojson_layer.features[i];
