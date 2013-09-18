@@ -232,7 +232,7 @@ function generate_points(s){
 			event_id: key,
 			event_name: detail.event_name,
 			venue_name: detail.venue_name,
-			venue_town: detail.venue.town,
+			venue_town: detail.venue_town,
 			venue_postcode: detail.venue_postcode,
 			venue_type: detail.venue_type,
 			event_date: detail.event_date,
