@@ -3,7 +3,7 @@
 	header('Content-type: application/json');
 
 	//Pickup the variables
-	$api_key = "838cec44cf59198b22731f4be213988a";
+	$api_key = "dd35e920-4aff-4299-ac3b-11208b2ea163";
 	$location_id = $_GET['location_id'];
 
 	//Create a URL
