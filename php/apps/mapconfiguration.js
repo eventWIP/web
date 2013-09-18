@@ -209,8 +209,10 @@ var min = 1000000000000000;
 				}
 			}
 			var closest = minFeat;
-			alert (closest.attributes.id);	
-			weatherResult = metofficesearch(closest.attributes.id);
+			if(closest.attributes.id!==null){
+				alert (closest.attributes.id);	
+				weatherResult = metofficesearch(closest.attributes.id);
+			}
 			
 	$.each(weatherResult,function(key,obj){
 
