@@ -1,0 +1,34 @@
+Symbol Code Description
+---------------------------
+none NA	Not available
+sun 0	Clear night
+sun 1	Sunny day
+cloud 2	Partly cloudy (night)
+cloud 3	Partly cloudy (day)
+none 4	Not used
+fog 5	Mist
+fog 6	Fog
+cloud 7	Cloudy
+cloud 8	Overcast
+heavy rain 9	Light rain shower (night)
+heavy rain 10	Light rain shower (day)
+heavy rain 11	Drizzle
+heavy rain 12	Light rain
+heavy rain 13	Heavy rain shower (night)
+heavy rain 14	Heavy rain shower (day)
+heavy rain 15	Heavy rain
+snow 16	Sleet shower (night)
+snow 17	Sleet shower (day)
+snow 18	Sleet
+heavy rain 19	Hail shower (night)
+heavy rain 20	Hail shower (day)
+heavy rain 21	Hail
+snow 22	Light snow shower (night)
+snow 23	Light snow shower (day)
+snow 24	Light snow
+snow 25	Heavy snow shower (night)
+snow 26	Heavy snow shower (day)
+snow 27	Heavy snow
+heavy rain 28	Thunder shower (night)
+heavy rain 29	Thunder shower (day)
+heavy rain 30	Thunder
