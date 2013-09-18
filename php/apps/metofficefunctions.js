@@ -16,7 +16,7 @@ function metofficesearch(location_id,date){
 			})
 
 				
-			});
+			
 
 
 
