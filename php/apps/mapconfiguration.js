@@ -47,7 +47,7 @@ function loadmap(){
 		strokeOpacity: 1,
 		fillOpacity: 1
 	};
-	var invisibleSty = OpenLayers.Util.applyDefaults(HoverStyle, OpenLayers.Feature.Vector.style["default"]);
+	var invisibleSty = OpenLayers.Util.applyDefaults(invisibleStyle, OpenLayers.Feature.Vector.style["default"]);
 	
 	var insm = new OpenLayers.StyleMap({
 		'default': invisibleSty
