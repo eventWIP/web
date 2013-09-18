@@ -151,9 +151,27 @@ function loadmap(){
 		items:[accordion, mapPanel]
 	});
 	
+	//Style Maps
+	var HoverStyle = {
+		strokeColor: "#00008B",
+		fillColor: "#4169E1",				
+		strokeOpacity: 0.85,
+		fillOpacity: 0.85,
+		pointRadius: 5,
+		strokeWidth: 2
+	};
+	var HoverSty = OpenLayers.Util.applyDefaults(HoverStyle, OpenLayers.Feature.Vector.style["default"]);
+	
+	var hosm = new OpenLayers.StyleMap({
+		'default': HoverSty
+	});
+	
 	//Skiddle point layer
 	pointLayer = new OpenLayers.Layer.Vector("Point Layer", {renderers: renderer});
-	eventPoints = new OpenLayers.Layer.Vector("Events Layer", {renderers: renderer});
+	eventPoints = new OpenLayers.Layer.Vector("Events Layer", {
+		renderers: renderer,
+		styleMap: hosm
+	});
 	var renderer = OpenLayers.Util.getParameters(window.location.href).renderer;
     renderer = (renderer) ? [renderer] : OpenLayers.Layer.Vector.prototype.renderers;   
 	map.addLayers([pointLayer, eventPoints]);
