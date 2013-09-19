@@ -350,6 +350,8 @@ function generate_points(s){
 			event_date: detail.event_date,
 			event_imageurl: detail.event_imageurl,
 			event_price: detail.event_price,
+			longitude: detail.venue_long,
+			latitude: detail.venue_lat,
 			fb_attend:detail.fb_yes,
 			fb_maybe:detail.fb_maybe,
 			twit_score:detail.twit_score,
