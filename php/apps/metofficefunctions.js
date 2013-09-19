@@ -38,13 +38,14 @@ function metofficesearch(location_id,date){
 	weather_info ={};
 	var w_type = ''
 	$.ajax({url:urlStr,async:false,success:function(data){
+		alert(data.toSource());
 		if(data !== 0){
 			var day_array = data.SiteRep.DV.Location.Period;
 			
 			$.each(day_array,function(key,obj){
 				
 				if (obj.value == date){
-					w_type = obj.Rep[0].W
+					w_type = obj.Rep[0].W;
 				}
 				
 				
