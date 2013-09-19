@@ -26,17 +26,22 @@ function evt_pop(e, type){
 			//Status cases go here
 			obj_html += "<br />";
 			//Add the icon
-			alert(e.attributes.w_type);
-			//obj_html += "<img src='"+ e.attributes.w_type +"/' />";
-			obj_html += "<img src='img/snow.png' />";
+			if(e.attributes.w_type=="Weather information is not yet available. Please try again nearer the event start date"){
+				obj_html += e.attributes.w_type;	
+			} else {
+				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
+			}
 			
-			window[obj_name] = new OpenLayers.Popup("chicken",
-				event_location,
-		               	new OpenLayers.Size(300,200),
-		               	obj_html,
-		               	true);
+			window[obj_name] = new OpenLayers.Popup({
+				lonlat: event_location,
+		               	size: new OpenLayers.Size(350,200),
+		               	contentHTML: obj_html,
+		               	panMapIfOutOfView: true,
+		               	autoSize: true,
+		               	opacity:0.8});
 		
 		    	map.addPopup(window[obj_name]);
+		    	window[obj_name].updatePosition();
 		}
 	} else {
 		map.removePopup("event_popup0");
