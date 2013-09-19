@@ -38,15 +38,15 @@ function metofficesearch(location_id,date){
 	var urlStr = "apps/metofficerequest.php?location_id="+location_id;
 	weather_info ={};
 	var w_type = ''
+	var weatherRange = "No";
 	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data !== 0){
 			var day_array = data.SiteRep.DV.Location.Period;
 			
 			$.each(day_array,function(key,obj){
-				alert(obj.value + " " + date);
 				if (obj.value == date){
+					weatherRange = "Yes";
 					w_type = obj.Rep[0].W;
-					alert(w_type);
 				}
 				
 				
@@ -61,7 +61,11 @@ function metofficesearch(location_id,date){
 			alert("Sorry, your search did not return any results");
 		}
 	}});
-
-	return img_obj[w_type];
+	
+	if (weatherRange = "No"){
+		return img_obj[w_type];
+	} else {
+		return "Weather information is not yet available. Please try again nearer the event start date";
+	}
 	
 }
