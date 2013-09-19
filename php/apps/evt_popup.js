@@ -32,7 +32,15 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
 			}
 			
-			window[obj_name] = new OpenLayers.Popup("chicken",
+			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
+	                    event_location,
+	                    null,
+	                    obj_html,
+	                    null,
+	                    true
+	                );
+				
+			/*window[obj_name] = new OpenLayers.Popup("chicken",
 				null,
 				event_location,
 				null,
@@ -45,7 +53,7 @@ function evt_pop(e, type){
 		               	null,
 		               	null,
 		               	null,
-		               	true);
+		               	true);*/
 		
 		    	map.addPopup(window[obj_name]);
 		    	//window[obj_name].updatePosition();
