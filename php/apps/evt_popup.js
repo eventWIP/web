@@ -41,7 +41,7 @@ function evt_pop(e, type){
 		               	opacity:0.8});
 		
 		    	map.addPopup(window[obj_name]);
-		    	window[obj_name].updatePosition();
+		    	//window[obj_name].updatePosition();
 		}
 	} else {
 		map.removePopup("event_popup0");
