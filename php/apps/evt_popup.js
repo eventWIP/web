@@ -26,6 +26,7 @@ function evt_pop(e, type){
 			//Status cases go here
 			obj_html += "<br />";
 			//Add the icon
+			alert(e.attributes.w_type);
 			//obj_html += "<img src='"+ e.attributes.w_type +"/' />";
 			obj_html += "<img src='img/snow.png' />";
 			
