@@ -32,12 +32,13 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
 			}
 			
-			window[obj_name] = new OpenLayers.Popup("popup",{
-				lonlat: event_location,
-		               	size: new OpenLayers.Size(350,200),
-		               	contentHTML: obj_html,
-		               	//'#6699FF',
-		               	opacity: 0.8});
+			alert(event_location);
+			alert(event_location.toSource());
+			window[obj_name] = new OpenLayers.Popup("popup",
+				event_location,
+		               	new OpenLayers.Size(350,200),
+		               	obj_html,
+		               	null);
 		
 		    	map.addPopup(window[obj_name]);
 		    	//window[obj_name].updatePosition();
