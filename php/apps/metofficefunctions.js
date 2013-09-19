@@ -62,10 +62,10 @@ function metofficesearch(location_id,date){
 		}
 	}});
 	
-	if (weatherRange = "No"){
-		return img_obj[w_type];
-	} else {
+	if (weatherRange == "No"){
 		return "Weather information is not yet available. Please try again nearer the event start date";
+	} else {
+		return img_obj[w_type];
 	}
 	
 }
