@@ -6,6 +6,7 @@ function evt_pop(e, type){
 		if (typeof e !== 'undefined'){
 			//We only process one result here
 			var i = 0;
+			alert(e.attributes.toSource());
 			var event_location = new OpenLayers.Geometry.Point(e.attributes.longitude, e.attributes.latitude);
 			var event_id = e.attributes.event_id;
 			
