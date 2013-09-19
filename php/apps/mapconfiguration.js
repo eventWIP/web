@@ -250,6 +250,7 @@ var min = 1000000000000000;
 	date = date +'Z'
 			
 	if (geojson_layer.features.length > 0) {
+		alert("1");
 			
 		for (var i = 0; i < geojson_layer.features.length; i++) {
 			var dist = Math.sqrt(
@@ -264,10 +265,14 @@ var min = 1000000000000000;
 			min = dist;
 			}
 		}
+		alert(minFeat);
 		var closest = minFeat;
 		if(closest!==null){
-				//alert (closest.attributes.id);	
+				//alert (closest.attributes.id);
+				alert(closest.attributes.id);
+				alert(date);
 				weatherResult = metofficesearch(closest.attributes.id,date);
+				alert(weatherResult);
 				return weatherResult
 			
 
