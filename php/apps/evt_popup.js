@@ -6,7 +6,6 @@ function evt_pop(e, type){
 		if (typeof e !== 'undefined'){
 			//We only process one result here
 			var i = 0;
-			alert(e.attributes.toSource());
 			var event_location = new OpenLayers.Geometry.Point(e.attributes.longitude, e.attributes.latitude);
 			var event_id = e.attributes.event_id;
 			
@@ -33,8 +32,6 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
 			}
 			
-			alert(event_location);
-			alert(event_location.toSource());
 			window[obj_name] = new OpenLayers.Popup("popup",
 				event_location,
 		               	new OpenLayers.Size(350,200),
@@ -42,7 +39,7 @@ function evt_pop(e, type){
 		               	null);
 		
 		    	map.addPopup(window[obj_name]);
-		    	//window[obj_name].updatePosition();
+		    	window[obj_name].updatePosition();
 		}
 	} else {
 		map.removePopup("event_popup0");
