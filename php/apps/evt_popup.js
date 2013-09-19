@@ -45,7 +45,7 @@ function evt_pop(e, type){
 		               	null,
 		               	null,
 		               	null,
-		               	true});
+		               	true);
 		
 		    	map.addPopup(window[obj_name]);
 		    	//window[obj_name].updatePosition();
