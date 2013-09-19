@@ -32,28 +32,12 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
 			}
 			
-			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
-	                    event_location,
-	                    null,
-	                    obj_html,
-	                    null,
-	                    true
-	                );
-				
-			/*window[obj_name] = new OpenLayers.Popup("chicken",
-				null,
-				event_location,
-				null,
-				null,
-		               	new OpenLayers.Size(350,200),
-		               	obj_html,
-		               	'#6699FF',
-		               	0.8,
-		               	null,
-		               	null,
-		               	null,
-		               	null,
-		               	true);*/
+			window[obj_name] = new OpenLayers.Popup("popup",{
+				lonlat: event_location,
+		               	size: new OpenLayers.Size(350,200),
+		               	contentHTML: obj_html,
+		               	//'#6699FF',
+		               	opacity: 0.8});
 		
 		    	map.addPopup(window[obj_name]);
 		    	//window[obj_name].updatePosition();
