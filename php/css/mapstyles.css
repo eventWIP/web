@@ -1,3 +1,50 @@
+/*Container for the map, used for styling the map window - Wraps the mapPanel DIV*/
+#mapFrame{
+	position: relative;
+	/*border: solid 5px;*/
+	float: left;
+	min-width: 810px;
+	min-height: 500px;
+}
+#mapPanel{
+	position: relative;
+	/*border: solid 5px;*/
+	width: 800px;
+	height: 490px;
+}
+
+/*DIV Placement Options*/
+#pageHeader{
+	position: relative;
+	/*border: solid 5px;*/
+	min-width: 1210px;
+	width: 1200px;
+	min-height: 25px;
+}
+#mapRight{
+	position: relative;
+	/*border: solid 5px;*/
+	float: left;
+	min-width: 400px;
+	min-height: 500px;
+}
+#pageSouth{
+	position: relative;
+	/*border: solid 5px;*/
+	clear: both;
+	min-width: 1210px;
+	width: 1210px;
+	min-height: 100px;
+}
+#pageFooter{
+	position: relative;
+	/*border: solid 5px;*/
+	min-width: 1210px;
+	width: 1210px;
+	min-height: 75px;
+}
+
+/*Search Tool Styles*/
 .neat{
    width: 100%;
    background-color: #6699FF;
@@ -5,6 +52,7 @@
    font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 }
 
+/*Loading Icon Class et al*/
 #loading{
   text-align: center;
 }

@@ -11,25 +11,36 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8">
 	<!--Librarys-->
-	<script src="http://openlayers.org/api/OpenLayers.js"></script>
 	<script src="external/Firebug/firebug.js"></script>
 	<script src="external/openlayers/proj4js-compressed.js"></script>
-
-    <!-- Ext resources -->
+	
+	<!-- OpenLayers 
+	<link rel="stylesheet" href="http://ol3js.org/en/master/build/ol.css" type="text/css">
+	<script src="http://ol3js.org/en/master/build/ol.js"></script>
+	Sticking with OpenLayers 2 until api has been checked for new version -->
+	<script src="http://openlayers.org/api/OpenLayers.js"></script>
+	
+	
+    <!-- Ext resources
 	<script src="external/ext/adapter/ext/ext-base.js"></script>
 	<script src="external/ext/ext-all-debug.js"></script> 
 	<link rel="stylesheet" type="text/css" href="external/ext/resources/css/ext-custom.css"></link>
+	EXT and Associated Removed in Favour of OpenLayers 3
+	-->
 	
 	<!-- JQuery resources -->
 	<script src="external/jquery/jquery-1.9.1.min.js"></script>
 	
-	<!-- GeoExt resources -->
+	<!-- GeoExt resources 
 	<script src="external/geoext/lib/GeoExt.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="external/geoext/resources/css/geoext-all-debug.css"></link>
+	EXT and Associated Removed in Favour of OpenLayers 3
+	-->
 	
 	<!--Style Sheets-->
 	<link href="css/mapstyles.css" rel="stylesheet" type="text/css" charset="utf-8" />
 	<script src="apps/mapconfiguration.js"></script>
+	<script src="apps/contentLoader.js"></script>
 	<script src="apps/evt_popup.js"></script>
 	<script src="apps/skiddlefunctions.js"></script>
 	<script src="apps/metofficefunctions.js"></script>
@@ -38,7 +49,12 @@
 </head>
 
 <body onload='loadmap()'>
-<div id='mapPanel'>
+<div id='pageHeader'></div>
+<div id='mapFrame'>
+<div id='mapPanel'></div>
 </div>
+<div id='mapRight'></div>
+<div id='pageSouth'></div>
+<div id='pageFooter'></div>
 </body>
 </html>

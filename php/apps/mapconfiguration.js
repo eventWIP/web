@@ -27,12 +27,15 @@ function loadmap(){
 	
 	var mapProj = new OpenLayers.Projection("EPSG:900913");
 	
-	map = new OpenLayers.Map({
+	map = new OpenLayers.Map('mapPanel',{
         projection: mapProj,
         units: "m",
+		width: 400,
+		height: 300,
         numZoomLevels: 18,
         maxResolution: 156543.0339,
         maxExtent: bounds,
+		zoom: 10,
         layers: [
             new OpenLayers.Layer.OSM("OpenStreetMap", null, {
                 transitionEffect: 'resize'
@@ -118,7 +121,7 @@ function loadmap(){
 	
 	
 	//Define the mapPanel
-	mapPanel = new GeoExt.MapPanel({
+	/*mapPanel = new GeoExt.MapPanel({
 		region: 'center', 
 		layout: 'fit',
 		height:(winH-68),
@@ -138,9 +141,9 @@ function loadmap(){
 			this.height = state.height;
 		},
 		zoom: 10
-	});
+	});*/
 	
-	var searchContent = '<table class="neat"><tr><td><b>Search Options</b></td></tr><tr><td>Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles</td></tr>';
+	/*var searchContent = '<table class="neat"><tr><td><b>Search Options</b></td></tr><tr><td>Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles</td></tr>';
 	searchContent += '<tr><td>Event Type: <input type="input" id="etype" value="FEST" size="10" /></td></tr>';
 	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
 	searchContent += '</table>'
@@ -166,7 +169,7 @@ function loadmap(){
 		height: winH-68,  //Trouble is that we need to specify a height.
 		layout:'border',
 		items:[accordion, mapPanel]
-	});
+	});*/
 	
 	//Style Maps
 	var HoverStyle = {
@@ -229,6 +232,10 @@ function loadmap(){
 	});
 	map.addControl(skiddlePoint);
 	
+	//Call the content loader which loads the page text
+	contentLoader();
+	
+	//Call the geolocator
 	geoLocation();
 
 }
