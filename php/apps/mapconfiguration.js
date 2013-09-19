@@ -320,6 +320,7 @@ function eventHandle(e){
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
 		fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long);
+		alert(obj.venue_lat + " " + obj.venue_long + " " + obj.event_date);
 		alert(findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date));
 		skiddleresult[key].w_type = findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date);
 		skiddleresult[key].fb_yes = fb_attend.attending;
