@@ -29,17 +29,16 @@ function evt_pop(e, type){
 			if(e.attributes.w_type=="Weather information is not yet available. Please try again nearer the event start date"){
 				obj_html += e.attributes.w_type;	
 			} else {
-				obj_html += "<img src='"+ e.attributes.w_type +"/' />";	
+				obj_html += "<img src='"+ e.attributes.w_type +"' />";	
 			}
 			
-			window[obj_name] = new OpenLayers.Popup("popup",
+			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
 				event_location,
 		               	new OpenLayers.Size(350,200),
 		               	obj_html,
 		               	null);
 		
 		    	map.addPopup(window[obj_name]);
-		    	window[obj_name].updatePosition();
 		}
 	} else {
 		map.removePopup("event_popup0");
