@@ -3,7 +3,7 @@ function skiddlesearchon(){
 	skiddlePoint.activate();
 }
 
-function skiddlesearch(x,y,buffer,v){
+function skiddlesearch(x,y,buffer,v,limit,offset){
 	if (typeof v=='undefined'){
 		var venue_t = '';
 	} else if (v=='ALL' || v==''){
