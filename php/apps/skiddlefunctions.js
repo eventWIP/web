@@ -11,12 +11,17 @@ function skiddlesearch(x,y,buffer,v,limit,offset){
 	} else {
 		venue_t = v;
 	}
-	var urlStr = "apps/skiddlerequestlimitoffset.php?eventcode=" + venue_t + "&latitude="+y+"&longitude="+x+"&radius="+buffer+"&limit="+limit+"&offset="+offset;
+	var numPages = 1;
+	for (var page= 1;page<=numPages;page++)
+	{
+	var urlStr = "apps/skiddlerequestlimitoffset.php?eventcode=" + venue_t + "&latitude="+y+"&longitude="+x+"&radius="+buffer+"&limit="+limit+"&offset="+(page-1)*limit;
 	event_info ={};
 	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data.responsetext!==null){
 			var returnArray = data.results;
-			
+			var numResults = data.totalcount;
+			var pageCount = data.pagecount;
+			numPages = numResults%limit+1; //is this allowed?? i doubt it
 			$.each(returnArray, function(key, event_result) {
 				if(event_result.venue.type=='Outdoors'){
 				event_obj = {
@@ -46,7 +51,7 @@ function skiddlesearch(x,y,buffer,v,limit,offset){
 			alert("Sorry, your search did not return any results");
 		}
 	}});
-	
+	}
 	return event_info;
 	
 }
