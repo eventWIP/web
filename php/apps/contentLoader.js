@@ -21,7 +21,7 @@ function contentLoader(){
 	document.getElementById('pageSouth').innerHTML = pageSouth;
 	
 	//Page Footer Section
-	var pageFooter = 'Developed as part of the GeoHack Project at FOSS4G 2013 on behalf of the Health & Safety Laboratory. <br />';
+	var pageFooter = 'Developed as part of the <a href="http://2013.foss4g.org/geohack/challenges/events/"/>Geohack</a> Project at FOSS4G 2013 on behalf of the Health & Safety Laboratory. <br />';
 	pageFooter += 'Current contributors include Timothy Aldridge, Matthew Hodgskiss, Neil Harris & Paul Wittle'; 
 	
 	document.getElementById('pageFooter').innerHTML = pageFooter;
