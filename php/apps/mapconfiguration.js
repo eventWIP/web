@@ -261,7 +261,7 @@ function showStatus(message){
 	alert(message);
 }
 
-function findNearestWeatherStation(x,y,date) {
+function findNearestWeatherStation(x,y,date,start_time,end_time) {
 var min = 1000000000000000;
 	var minFeat = null;
 	date = date +'Z'
@@ -284,7 +284,7 @@ var min = 1000000000000000;
 		var closest = minFeat;
 		if(closest!==null){
 				//alert (closest.attributes.id);
-				weatherResult = metofficesearch(closest.attributes.id,date);
+				weatherResult = metofficesearch(closest.attributes.id,date,start_time,end_time);
 				return weatherResult;
 			
 
@@ -337,7 +337,7 @@ function eventHandle(e){
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
 		fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long);
-		w_type =findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date);
+		w_type =findNearestWeatherStation(obj.venue_lat,obj.venue_long,obj.event_date,obj.opening_open,obj,opening_close);
 		skiddleresult[key].w_type = w_type;
 		skiddleresult[key].fb_yes = fb_attend.attending;
 		skiddleresult[key].fb_maybe = fb_attend.maybe;
