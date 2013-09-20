@@ -32,7 +32,7 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"' />";	
 			}
 			
-			alert(OpenLayers.LonLat.fromString(event_location));
+			//alert(OpenLayers.LonLat.fromString(event_location));
 			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
 				new OpenLayers.LonLat.fromString(event_location),
 		               	new OpenLayers.Size(350,200),
@@ -42,10 +42,9 @@ function evt_pop(e, type){
 		        map.addPopup(window[obj_name]);
 		        
 		        //Update the location
-		        alert(map.popups.toSource());
-		        map.popups[a].lonlat.lon = e.attributes.longitude;
-			map.popups[a].lonlat.lat = e.attributes.latitude;
-			map.popups[a].updatePosition();
+		        map.popups["popup"].lonlat.lon = e.attributes.longitude;
+			map.popups["popup"].lonlat.lat = e.attributes.latitude;
+			map.popups["popup"].updatePosition();
 		    	
 		}
 	} else {
