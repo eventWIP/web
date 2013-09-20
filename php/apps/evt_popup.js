@@ -32,7 +32,6 @@ function evt_pop(e, type){
 				obj_html += "<img src='"+ e.attributes.w_type +"' />";	
 			}
 			
-			alert(event_location);
 			alert(OpenLayers.LonLat.fromString(event_location));
 			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
 				new OpenLayers.LonLat.fromString(event_location),
@@ -40,7 +39,7 @@ function evt_pop(e, type){
 		               	obj_html,
 		               	null);
 			
-			alert(window[obj_name]);
+			alert(window[obj_name].toSource());
 		    	map.addPopup(window[obj_name]);
 		}
 	} else {
