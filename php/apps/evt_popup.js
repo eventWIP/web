@@ -12,7 +12,8 @@ function evt_pop(e, type){
 			//Add the popup controls
 			var obj_name = "event_popup" + i;
 			var obj_html = "<b>" + e.attributes.event_name + "</b><br />";
-			obj_html += "The event is taking place on " + e.attributes.event_date + " <br />";
+			var dateFormat = e.attributes.event_date.split("-");
+			obj_html += "The event is taking place on " + dateFormat[2] + "/" + dateFormat[1] + "/" + dateFormat[0] + " <br />";
 			obj_html += "This event is";
 			if (e.attributes.event_price==0){
 				obj_html += " free. <br />";
