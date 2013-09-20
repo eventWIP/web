@@ -7,7 +7,14 @@ function contentLoader(){
 
 	//Map Right Content
 	var searchContent = '<table class="neat"><tr><td><b>Search Options</b></td></tr><tr><td>Search Area:  <input id="buffersize" type="input" size="5" value="5" />miles</td></tr>';
-	searchContent += '<tr><td>Event Type: <input type="input" id="etype" value="FEST" size="10" /></td></tr>';
+	//searchContent += '<tr><td>Event Type: <input type="input" id="etype" value="FEST" size="10" /></td></tr>';
+	searchContent += '<tr><td>Event Type: <select id="etype"><option value="">All Events</option><option value="ARTS">Arts</option><option value="BARPUB">Bar / Pub</option>';
+	searchContent += '<option value="CLUB">Club</option><option value="COMEDY">Comedy</option><option value="COMEDY">Comedy</option>';
+	searchContent += '<option value="DATE">Dating Event</option><option value="EXHIB">Exhibitions and Attractions</option>';
+	searchContent += '<option value="FEST">Festivals</option><option value="KIDS">Kids / Family</option><option value="LGB">Gay / Lesbian</option>';
+	searchContent += '<option value="LIVE">Live</option><option value="SPORT">Sport</option><option value="THEATRE">Theatre</option></select></tr></td>';
+	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
+	
 	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
 	searchContent += '</table>';
 	searchContent += '<div id="loading" class="hideLoad">Loading, please wait...<br /><img src="img/loader.gif" /></div>';
