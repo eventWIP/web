@@ -30,7 +30,7 @@ $.ajax({
 			console.log('here');
 		        urls.push({'attend':attend_url,'maybe':maybe_url,'info':info_url});
 		        console.log(obj);	
-		}
+		});
 	}
 });
 
