@@ -28,21 +28,33 @@ function loadmap(){
 	var mapProj = new OpenLayers.Projection("EPSG:900913");
 	
 	map = new OpenLayers.Map('mapPanel',{
-        projection: mapProj,
-        units: "m",
+	        projection: mapProj,
+	        units: "m",
 		width: 400,
 		height: 300,
-        numZoomLevels: 18,
-        maxResolution: 156543.0339,
-        maxExtent: bounds,
-		zoom: 10,
-        layers: [
-            new OpenLayers.Layer.OSM("OpenStreetMap", null, {
-                transitionEffect: 'resize'
-            })
-        ],
-        center: new OpenLayers.LonLat(405000,285000).transform(new OpenLayers.Projection("EPSG:27700"),new OpenLayers.Projection("EPSG:900913"))
-    });
+	        numZoomLevels: 18,
+	        maxResolution: 156543.0339,
+	        maxExtent: bounds,
+			zoom: 10,
+	        layers: [
+	            new OpenLayers.Layer.OSM("OpenStreetMap", null, {
+	                transitionEffect: 'resize'
+	            })
+	        ],
+	        center: new OpenLayers.LonLat(405000,285000).transform(new OpenLayers.Projection("EPSG:27700"),new OpenLayers.Projection("EPSG:900913"))
+	});
+	
+	if (winW /800 < 1){
+		var winFactor = winW / 800;
+		map.width = (800*winFactor);
+		map.height = (300*winFactor);
+		document.querySelector('#mapPanel').style.width = (800*winFactor);
+		document.querySelector('#mapPanel').style.height = (300*winFactor);
+		
+		document.querySelector('#mapPanel-r').style.height = (490*winFactor);
+		
+	}
+	
 	
 	// Load geojson of weather station locations
 	//Style Map
