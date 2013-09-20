@@ -15,7 +15,6 @@ function contentLoader(){
 	searchContent += '<option value="LIVE">Live</option><option value="SPORT">Sport</option><option value="THEATRE">Theatre</option></select></tr></td>';
 	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
 	
-	searchContent += '<tr><td><input type="button" value="Select Location on Map" onclick="skiddlesearchon()" /></td></tr>'; 
 	searchContent += '</table>';
 	searchContent += '<div id="loading" class="hideLoad">Loading, please wait...<br /><img src="img/loader.gif" /></div>';
 	
