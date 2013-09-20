@@ -16,7 +16,7 @@ function contentLoader(){
 	
 	//Page South Section -- Results?
 	var pageSouth = '';
-	pageSouth += 'If you would like to get involved with this development please visit our GitHub page at <a href="" />[Add link]</a>';
+	pageSouth += 'If you would like to get involved with this development please visit our GitHub page at <a href="https://github.com/eventWIP" />eventWIP [content to be added shortly]</a>';
 	
 	document.getElementById('pageSouth').innerHTML = pageSouth;
 	
