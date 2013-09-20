@@ -6,7 +6,7 @@ function evt_pop(e, type){
 		if (typeof e !== 'undefined'){
 			//We only process one result here
 			var i = 0;
-			var event_location = [e.attributes.longitude, e.attributes.latitude];
+			var event_location = e.attributes.longitude + ", " + e.attributes.latitude;
 			var event_id = e.attributes.event_id;
 			
 			//Add the popup controls
@@ -33,7 +33,7 @@ function evt_pop(e, type){
 			}
 			
 			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
-				OpenLayers.LonLat.fromArray(event_location),
+				new OpenLayers.LonLat.fromString(event_location),
 		               	new OpenLayers.Size(350,200),
 		               	obj_html,
 		               	null);
