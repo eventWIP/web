@@ -44,7 +44,7 @@ function loadmap(){
 	        center: new OpenLayers.LonLat(405000,285000).transform(new OpenLayers.Projection("EPSG:27700"),new OpenLayers.Projection("EPSG:900913"))
 	});
 	
-	if (winW /800 < 1){
+	/*if (winW /800 < 1){
 		var winFactor = winW / 800;
 		map.width = (800*winFactor);
 		map.height = (300*winFactor);
@@ -58,7 +58,7 @@ function loadmap(){
 		document.getElementById('#mapPanel-t').style.width = (800*winFactor);
 		document.getElementById('#mapPanel-b').style.width = (800*winFactor);
 		
-	}
+	}*/
 	
 	
 	// Load geojson of weather station locations
