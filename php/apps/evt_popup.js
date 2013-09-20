@@ -38,9 +38,15 @@ function evt_pop(e, type){
 		               	new OpenLayers.Size(350,200),
 		               	obj_html,
 		               	null);
-			
-			alert(window[obj_name].toSource());
-		    	map.addPopup(window[obj_name]);
+		               
+		        map.addPopup(window[obj_name]);
+		        
+		        //Update the location
+		        alert(map.popups.toSource());
+		        map.popups[a].lonlat.lon = e.attributes.longitude;
+			map.popups[a].lonlat.lat = e.attributes.latitude;
+			map.popups[a].updatePosition();
+		    	
 		}
 	} else {
 		map.removePopup("event_popup0");
