@@ -20,6 +20,26 @@
 	height: 110px;
 	background: url(../img/frame-t.png) repeat-x;
 }
+#mapFrame-tl{
+	position: relative;
+	float: left;
+	width:96px;
+	height: 110px;
+	background: url(../img/frame-tl2.png) no-repeat;
+}
+#mapFrame-tr{
+	position: relative;
+	float: left;
+	width:96px;
+	height: 110px;
+	background: url(../img/frame-tr2.png) no-repeat;
+}
+#mapFrame-t{
+	position: relative;
+	float: left;
+	width:800px;
+	height: 110px;
+}
 .mapFrame-c{
 	clear: both;
 }
@@ -64,6 +84,7 @@
 	float: left;
 	width: 800px;
 	height: 490px;
+	border: solid 2px #880015;
 }
 
 #mapRight{
