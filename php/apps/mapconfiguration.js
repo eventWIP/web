@@ -316,7 +316,7 @@ function eventHandle(e){
 	//skiddle here
 	var ebuff = document.getElementById('buffersize').value;
 	var etype = document.getElementById('etype').value;
-	skiddleresult = skiddlesearch(e.x,e.y,ebuff,etype);
+	skiddleresult = skiddlesearch(e.x,e.y,ebuff,etype,100,0);
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
 		fb_attend = getnumbers(obj.event_name.split(' ').join('+'),obj.venue_lat,obj.venue_long);
