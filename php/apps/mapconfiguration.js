@@ -51,6 +51,7 @@ function loadmap(){
 		document.getElementById('#mapPanel').style.width = (800*winFactor);
 		document.getElementById('#mapPanel').style.height = (300*winFactor);
 		document.getElementById('#mapRight').style.height = (300*winFactor);
+		document.getElementById('#mapRight').style.width = (200*winFactor);
 		
 		document.getElementById('#mapPanel-r').style.height = (300*winFactor);
 		document.getElementById('#mapPanel-l').style.height = (300*winFactor);
