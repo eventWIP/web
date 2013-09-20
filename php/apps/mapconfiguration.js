@@ -51,7 +51,10 @@ function loadmap(){
 		document.querySelector('#mapPanel').style.width = (800*winFactor);
 		document.querySelector('#mapPanel').style.height = (300*winFactor);
 		
-		document.querySelector('#mapPanel-r').style.height = (490*winFactor);
+		document.querySelector('#mapPanel-r').style.height = (300*winFactor);
+		document.querySelector('#mapPanel-l').style.height = (300*winFactor);
+		document.querySelector('#mapPanel-t').style.width = (800*winFactor);
+		document.querySelector('#mapPanel-b').style.width = (800*winFactor);
 		
 	}
 	
