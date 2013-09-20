@@ -48,13 +48,13 @@ function loadmap(){
 		var winFactor = winW / 800;
 		map.width = (800*winFactor);
 		map.height = (300*winFactor);
-		document.querySelector('#mapPanel').style.width = (800*winFactor);
-		document.querySelector('#mapPanel').style.height = (300*winFactor);
+		document.getElementById('#mapPanel').style.width = (800*winFactor);
+		document.getElementById('#mapPanel').style.height = (300*winFactor);
 		
-		document.querySelector('#mapPanel-r').style.height = (300*winFactor);
-		document.querySelector('#mapPanel-l').style.height = (300*winFactor);
-		document.querySelector('#mapPanel-t').style.width = (800*winFactor);
-		document.querySelector('#mapPanel-b').style.width = (800*winFactor);
+		document.getElementById('#mapPanel-r').style.height = (300*winFactor);
+		document.getElementById('#mapPanel-l').style.height = (300*winFactor);
+		document.getElementById('#mapPanel-t').style.width = (800*winFactor);
+		document.getElementById('#mapPanel-b').style.width = (800*winFactor);
 		
 	}
 	
