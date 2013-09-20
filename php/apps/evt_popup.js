@@ -37,7 +37,8 @@ function evt_pop(e, type){
 				new OpenLayers.LonLat.fromString(event_location).transform(new OpenLayers.Projection("EPSG:4326"),new OpenLayers.Projection("EPSG:900913")),
 		               	new OpenLayers.Size(350,200),
 		               	obj_html,
-		               	null);
+		               	null,
+		               	true);
 		               
 		        map.addPopup(window[obj_name]);
 		}
