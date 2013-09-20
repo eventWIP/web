@@ -1,6 +1,7 @@
 function contentLoader(){
 	//Page Header Section
 	var pageHeader = '<h3>Event Weather Impact Planner</h3>';
+	pageHeader += '<h4>Please note; this site is currently under development and new functionalities will be added shortly</h4>';
 	
 	document.getElementById('pageHeader').innerHTML = pageHeader;
 
@@ -14,7 +15,7 @@ function contentLoader(){
 	document.getElementById('mapRight').innerHTML = searchContent;
 	
 	//Page South Section -- Results?
-	var pageSouth = '<i>Please note; this site is currently under development and new functionalities will be added shortly</i><br />';
+	var pageSouth = '';
 	pageSouth += 'If you would like to get involved with this development please visit our GitHub page at <a href="" />[Add link]</a>';
 	
 	document.getElementById('pageSouth').innerHTML = pageSouth;
