@@ -21,11 +21,11 @@ attending =0
 maybe =0   
     
 $.ajax({
-	url: 'fb_request.php?rtype=1&q='+terms+'&type=event', async:false, success: function(response){
+	url: 'apps/fb_request.php?rtype=1&q='+terms+'&type=event', async:false, success: function(response){
 		$.each(response.data,function(key,obj){
-			info_url = "fb_request.php?rtype=2&objID="+obj.id;
-         		attend_url= "fb_request.php?rtype=3&objID="+obj.id;
-	 		maybe_url= "fb_request.php?rtype=4&objID="+obj.id;
+			info_url = "apps/fb_request.php?rtype=2&objID="+obj.id;
+         		attend_url= "apps/fb_request.php?rtype=3&objID="+obj.id;
+	 		maybe_url= "apps/fb_request.php?rtype=4&objID="+obj.id;
 
 			console.log('here');
 		        urls.push({'attend':attend_url,'maybe':maybe_url,'info':info_url});
