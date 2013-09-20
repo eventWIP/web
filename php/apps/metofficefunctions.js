@@ -1,3 +1,15 @@
+function getmetofficetimeperiod(time) {
+//e.g. 03:00 = 180
+// 02:00 falls between 2 3 hours periods 
+var hours = time.getHours();
+var minutes = time.getMinutes();
+var total_minutes = (hours * 60) + minutes;
+var interval = total_minutes / 180;
+var period = Math.round(interval) * 180;
+return period;
+}
+
+
 function metofficesearch(location_id,date,start_time,end_time){
 	img_obj= {
 		'0':'/img/sun.png',
@@ -42,13 +54,14 @@ function metofficesearch(location_id,date,start_time,end_time){
 	$.ajax({url:urlStr,async:false,success:function(data){
 		if(data !== 0){
 			var day_array = data.SiteRep.DV.Location.Period;
-			
+			var period_id = 1;
 			$.each(day_array,function(key,obj){
 				if (obj.value == date){
 					weatherRange = "Yes";
 					w_type = obj.Rep[0].W;
+					// change this to look up metoffice time period
 				}
-				
+				period_id++;
 				
 			})
 
