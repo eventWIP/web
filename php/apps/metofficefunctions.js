@@ -1,4 +1,4 @@
-function metofficesearch(location_id,date){
+function metofficesearch(location_id,date,start_time,end_time){
 	img_obj= {
 		'0':'/img/sun.png',
 		'1':'/img/sun.png',
