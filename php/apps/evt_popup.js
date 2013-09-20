@@ -34,7 +34,7 @@ function evt_pop(e, type){
 			
 			//alert(OpenLayers.LonLat.fromString(event_location));
 			window[obj_name] = new OpenLayers.Popup.FramedCloud("popup",
-				new OpenLayers.LonLat.fromString(event_location),
+				new OpenLayers.LonLat.fromString(event_location).transform(new OpenLayers.Projection("EPSG:4326"),new OpenLayers.Projection("EPSG:900913")),
 		               	new OpenLayers.Size(350,200),
 		               	obj_html,
 		               	null);
