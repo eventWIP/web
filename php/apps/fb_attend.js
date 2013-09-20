@@ -16,26 +16,22 @@ function distance(lat1, lon1, lat2, lon2, unit) {
 
 function getnumbers(terms,lat,lon){
     
-    apikey = "CAACEdEose0cBAAQfKIPfR8X8zL4QsWwZAZBYpwIZACyu35kYJnbWioGX4Sw1fpl8PpD2RElcsQhZB3KIYfZAZCNW7VfK62FyjqtCeCmN3rlwM4XzYyjJyKmxmZAqyjRd5EkNq5UrZB3pbR3l9hyQZCBleQAQbaII0j66tDddlEp0PdmGGbcy8C8tYnvDg9MCFXHIZD"
-        urls = []
+urls = []
 attending =0
- maybe =0   
+maybe =0   
     
 $.ajax({
-url: 'https://graph.facebook.com/search?q='+terms+'&type=event&access_token='+apikey,
-    async:false,
-     success: function(response){
-         $.each(response.data,function(key,obj){
-         info_url = "https://graph.facebook.com/"+obj.id+"?method=GET&format=json&suppress_http_code=1&access_token="+apikey;
-         attend_url= "https://graph.facebook.com/"+obj.id+"/attending?method=GET&format=json&suppress_http_code=1&access_token="+apikey;
-	 maybe_url= "https://graph.facebook.com/"+obj.id+"/maybe?method=GET&format=json&suppress_http_code=1&access_token="+apikey;
+	url: 'fb_request.php?rtype=1&q='+terms+'&type=event', async:false, success: function(response){
+		$.each(response.data,function(key,obj){
+			info_url = "fb_request.php?rtype=2&objID="+obj.id;
+         		attend_url= "fb_request.php?rtype=3&objID="+obj.id;
+	 		maybe_url= "fb_request.php?rtype=4&objID="+obj.id;
 
-         console.log('here')
-         urls.push({'attend':attend_url,'maybe':maybe_url,'info':info_url})
-         console.log(obj)
-
-         })
-     }
+			console.log('here');
+		        urls.push({'attend':attend_url,'maybe':maybe_url,'info':info_url});
+		        console.log(obj);	
+		}
+	}
 });
 
 near = false
