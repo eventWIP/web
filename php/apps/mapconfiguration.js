@@ -369,6 +369,8 @@ function generate_points(s){
 			event_price: detail.event_price,
 			longitude: detail.venue_long,
 			latitude: detail.venue_lat,
+			opening_open: detail.openingtimes.doorsopen,
+			opening_close: detail.openingtimes.doorsclose,
 			fb_attend:detail.fb_yes,
 			fb_maybe:detail.fb_maybe,
 			twit_score:detail.twit_score,
