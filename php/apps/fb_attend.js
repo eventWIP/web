@@ -21,7 +21,7 @@ attending =0
 maybe =0   
     
 $.ajax({
-	url: 'apps/fb_request.php?rtype=1&q='+terms+'&type=event', async:false, success: function(response){
+	url: 'apps/fb_request.php?rtype=1&q='+terms.replace(\ \g,"+")+'&type=event', async:false, success: function(response){
 		$.each(response.data,function(key,obj){
 			info_url = "apps/fb_request.php?rtype=2&objID="+obj.id;
          		attend_url= "apps/fb_request.php?rtype=3&objID="+obj.id;
