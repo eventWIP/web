@@ -332,7 +332,7 @@ function eventHandle(e){
 	//Call the searches
 	//skiddle here
 	var ebuff = document.getElementById('buffersize').value;
-	var etype = document.getElementById('etype').value;
+	var etype = document.getElementById('etype').options[document.getElementById('etype').options.selectedIndex].value;
 	skiddleresult = skiddlesearch(e.x,e.y,ebuff,etype,100,0);
 	//Facebook here
 	$.each(skiddleresult,function(key,obj){
