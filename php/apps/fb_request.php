@@ -5,6 +5,7 @@
   $rtype = $_GET['rtype'];
   $type = $_GET['type'];
   $q = $_GET['q'];
+  $q = str_replace(" ","+",$q);
   $objID = $_GET['objID'];
   
   //How do we hide the secret code?
