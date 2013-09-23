@@ -12,13 +12,13 @@
   //$appsecret_proof = hash_hmac('sha256', '617411168311328', 'How do we hide it?');
   
   if($rtype==1){
-    $url = 'https://graph.facebook.com/search?q=' . $q . '&type=' . $type . '&access_token=CAACEdEose0cBAAO10qnRkyuiFtwiz1fLP2X1g3pJiT0aCHpJMbwk9JKfCEviuhUA3q4PhA5ZA1AVU6eW9jsKvW2A58UQ8WTgQZCSuO4tx7mqz3anjgdKksd1ZAeFhrKAhgYOZADK3PwZAeAZCZB8pJkBAqfCvnUMmGfMK76rCxfKZCP2Fhfm05qn0pIZBAUMrsxMh5NxssQzd2QZDZD';
+    $url = 'https://graph.facebook.com/search?q=' . $q . '&type=' . $type . '&access_token=CAACEdEose0cBAMXgw65a8BVqPrhGuEllNpUnQ5Gsfl8ZCOrzOZCTjoe4TYNkqmCxA2ut8YUQnSGWapNHZCMWtZAzkxxYEqhUzoZCnstqnz5gkfZApWjYDZC7p1o3dz3hOKnIBSr3ZBrlQbMTUdFUuKAveEWkSyKWGKQAmZAcgsUCSUK7IgSzJeB7darZBX9QFuVSAImnhu7BldkQZDZD';
   } elseif ($rtype==2){
-    $url = 'https://graph.facebook.com/' . $objID . '?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAAO10qnRkyuiFtwiz1fLP2X1g3pJiT0aCHpJMbwk9JKfCEviuhUA3q4PhA5ZA1AVU6eW9jsKvW2A58UQ8WTgQZCSuO4tx7mqz3anjgdKksd1ZAeFhrKAhgYOZADK3PwZAeAZCZB8pJkBAqfCvnUMmGfMK76rCxfKZCP2Fhfm05qn0pIZBAUMrsxMh5NxssQzd2QZDZD';
+    $url = 'https://graph.facebook.com/' . $objID . '?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAMXgw65a8BVqPrhGuEllNpUnQ5Gsfl8ZCOrzOZCTjoe4TYNkqmCxA2ut8YUQnSGWapNHZCMWtZAzkxxYEqhUzoZCnstqnz5gkfZApWjYDZC7p1o3dz3hOKnIBSr3ZBrlQbMTUdFUuKAveEWkSyKWGKQAmZAcgsUCSUK7IgSzJeB7darZBX9QFuVSAImnhu7BldkQZDZD';
   } elseif ($rtype==3){
-    $url = 'https://graph.facebook.com/' . $objID . '/attending?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAAO10qnRkyuiFtwiz1fLP2X1g3pJiT0aCHpJMbwk9JKfCEviuhUA3q4PhA5ZA1AVU6eW9jsKvW2A58UQ8WTgQZCSuO4tx7mqz3anjgdKksd1ZAeFhrKAhgYOZADK3PwZAeAZCZB8pJkBAqfCvnUMmGfMK76rCxfKZCP2Fhfm05qn0pIZBAUMrsxMh5NxssQzd2QZDZD';
+    $url = 'https://graph.facebook.com/' . $objID . '/attending?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAMXgw65a8BVqPrhGuEllNpUnQ5Gsfl8ZCOrzOZCTjoe4TYNkqmCxA2ut8YUQnSGWapNHZCMWtZAzkxxYEqhUzoZCnstqnz5gkfZApWjYDZC7p1o3dz3hOKnIBSr3ZBrlQbMTUdFUuKAveEWkSyKWGKQAmZAcgsUCSUK7IgSzJeB7darZBX9QFuVSAImnhu7BldkQZDZD';
   } elseif ($rtype==4){
-    $url = 'https://graph.facebook.com/' . $objID . '/maybe?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAAO10qnRkyuiFtwiz1fLP2X1g3pJiT0aCHpJMbwk9JKfCEviuhUA3q4PhA5ZA1AVU6eW9jsKvW2A58UQ8WTgQZCSuO4tx7mqz3anjgdKksd1ZAeFhrKAhgYOZADK3PwZAeAZCZB8pJkBAqfCvnUMmGfMK76rCxfKZCP2Fhfm05qn0pIZBAUMrsxMh5NxssQzd2QZDZD';
+    $url = 'https://graph.facebook.com/' . $objID . '/maybe?method=GET&format=json&suppress_http_code=1&access_token=CAACEdEose0cBAMXgw65a8BVqPrhGuEllNpUnQ5Gsfl8ZCOrzOZCTjoe4TYNkqmCxA2ut8YUQnSGWapNHZCMWtZAzkxxYEqhUzoZCnstqnz5gkfZApWjYDZC7p1o3dz3hOKnIBSr3ZBrlQbMTUdFUuKAveEWkSyKWGKQAmZAcgsUCSUK7IgSzJeB7darZBX9QFuVSAImnhu7BldkQZDZD';
   }
 
   //Obtain a response from the server
